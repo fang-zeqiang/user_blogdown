@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <title>相似性和距离度量 (Similarity &amp; Distance Measurement) - Zeqiang Fang | 方泽强</title>
+
+    <meta name="referrer" content="no-referrer">
+    
+    <meta property="og:title" content="相似性和距离度量 (Similarity &amp; Distance Measurement) - Zeqiang Fang | 方泽强">
+    <meta name="description" property="og:description" content="相似性度量 (Similarity Measurement) 用于衡量两个元素之间的相似性程度或两者之间的距离 (Distance)。距离衡量的是指元素之间的不相似性 (Dissimilari">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Zeqiang Fang | 方泽强">
+    <meta property="og:url" content="https://leovan.me/cn/2019/01/similarity-and-distance-measurement/">
+
+    
+    
+    
+    
+    <meta name="author" property="article:author" content="范叶亮">
+    
+    
+    
+    <meta name="date" property="article:published_time" content="2019-01-01" scheme="YYYY-MM-DD">
+    
+    
+    <meta name="date" property="article:modified_time" content="2019-01-01" scheme="YYYY-MM-DD">
+    
+
+    
+    <meta name="keywords" property="article:tag" content ="相似性度量,Similarity Measurement,距离度量,Distance Measurement,明可夫斯基距离,明氏距离,Minkowski Distance,欧式距离,Euclidean Metric,曼哈顿距离,出租车距离,Manhattan Distance,切比雪夫距离,Chebyshev Distance,马哈拉诺比斯距离,马氏距离,Mahalanobis Distance,向量内积,Inner Product of Vectors,余弦距离,Cosine Distance,余弦相似度,Cosine Similarity,相关系数,Correlation,皮尔逊相关系数,Pearson Correlation,Jaccard 系数,Dice 系数,Tversky 系数,编辑距离,Edit Distance,莱文斯坦距离,Levenshtein Distance,汉明距离,Hamming Distance,熵,Entropy,条件熵,Conditional Entropy,联合熵,Joint Entropy,互信息,Mutual Information,相对熵,Relative Entropy,KL 散度,Kullback-Leibler Divergence,JS 散度,Jensen-Shannon Divergence,推土机距离,Earth Mover Distance,Wasserstein Distance,DTW 距离,Dynamic Time Warping Distance,流形距离,Disntace of Manifold">
+    
+    
+    <meta name="theme-color" content="#0d0d0d">
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/web/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/web/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/images/web/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="62x62" href="/images/web/favicon-62x62.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/web/favicon-192x192.png">
+    <link rel="apple-touch-icon" size="192x192" href="/images/web/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
+        
+    
+
+    
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://leovan.me/cn"
+        },
+        "name": "相似性和距离度量 (Similarity \u0026 Distance Measurement)",
+        "headline": "相似性和距离度量 (Similarity \u0026 Distance Measurement)",
+        "description" : "相似性度量 (Similarity Measurement) 用于衡量两个元素之间的相似性程度或两者之间的距离 (Distance)。距离衡量的是指元素之间的不相似性 (Dissimilari",
+        "genre": [
+            "机器学习"
+        ],
+        "datePublished": "2019-01-01",
+        "dateModified": "2019-01-01",
+        "wordCount": "4205",
+        "keywords": [
+            "相似性度量", "Similarity Measurement", "距离度量", "Distance Measurement", "明可夫斯基距离", "明氏距离", "Minkowski Distance", "欧式距离", "Euclidean Metric", "曼哈顿距离", "出租车距离", "Manhattan Distance", "切比雪夫距离", "Chebyshev Distance", "马哈拉诺比斯距离", "马氏距离", "Mahalanobis Distance", "向量内积", "Inner Product of Vectors", "余弦距离", "Cosine Distance", "余弦相似度", "Cosine Similarity", "相关系数", "Correlation", "皮尔逊相关系数", "Pearson Correlation", "Jaccard 系数", "Dice 系数", "Tversky 系数", "编辑距离", "Edit Distance", "莱文斯坦距离", "Levenshtein Distance", "汉明距离", "Hamming Distance", "熵", "Entropy", "条件熵", "Conditional Entropy", "联合熵", "Joint Entropy", "互信息", "Mutual Information", "相对熵", "Relative Entropy", "KL 散度", "Kullback-Leibler Divergence", "JS 散度", "Jensen-Shannon Divergence", "推土机距离", "Earth Mover Distance", "Wasserstein Distance", "DTW 距离", "Dynamic Time Warping Distance", "流形距离", "Disntace of Manifold"
+        ],
+        "image": [
+            "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/manhattan-distance.svg", "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/2D-unit-balls.png", "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/mahalanobis-distance.png", "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/correlation-examples.png", "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/entropy-demo.png", "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/dtw-threeway.png", "https://leovan.me/images/cn/2019-01-01-similarity-and-distance-measurement/dtw-twoway.png"
+        ],
+        "author": {
+            "@type": "Person",
+            "name": "范叶亮"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "范叶亮",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://leovan.me/images/web/publisher-logo.png"
+            }
+        },
+        "url": "https://leovan.me/cn/2019/01/similarity-and-distance-measurement/"
+    }
+    </script>
+    
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js'></script>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/6.5.95/css/materialdesignicons.min.css">
+
+
+
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="/css/fonts.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/light.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" id="dark-mode-style" disabled="disabled">
+<link rel="stylesheet" type="text/css" href="/css/icons.css">
+<link rel="stylesheet" type="text/css" href="/css/print.css">
+
+  </head>
+
+  
+  <body class="cn">
+    <header class="masthead">
+      
+
+<div class="logo"></div>
+<p class="slogan">优雅永不过时</p>
+      <nav class="menu">
+  <ul>
+  
+  
+  
+    
+  
+  
+    <li><a href="/">首页</a></li>
+  
+    <li><a href="/cn/">博客</a></li>
+  
+    <li><a href="/categories/">分类</a></li>
+  
+    <li class="menu-separator"><span>&nbsp;</span></li>
+  
+    <li><a href="/cn/about/">关于</a></li>
+  
+    <li><a href="/cn/resume/">简历</a></li>
+  
+  
+
+
+<li class="menu-separator"><span>&nbsp;</span></li>
+
+<li><a href="/cn/index.xml" target="_blank" type="application/rss+xml" title="RSS feed">订阅</a></li>
+
+<li><a href="https://github.com/fang-zeqiang/fang-zeqiang.github.io/blob/master/LICENSE" target="_blank" title="Attribution-NonCommercial-ShareAlike 4.0 International">版权</a></li>
+
+
+  <li class="light-dark-mode no-border-bottom"><a id="light-dark-mode-action"><span id="light-dark-mode-icon" class="mdi mdi-weather-night"></span></a></li>
+  </ul>
+</nav>
+
+      <script src="/js/toggle-theme.js"></script>
+    </header>
+
+    <article class="main">
+      <header class="title">
+      
+<h1>相似性和距离度量 (Similarity &amp; Distance Measurement)</h1>
+
+
+
+
+
+
+
+<h3>范叶亮 / 
+2019-01-01</h3>
+
+
+
+<h3 class="post-meta">
+
+
+<strong>分类: </strong>
+<a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">机器学习</a>
+
+
+
+
+/
+
+
+
+
+<strong>标签: </strong>
+<span>相似性度量</span>, <span>Similarity Measurement</span>, <span>距离度量</span>, <span>Distance Measurement</span>, <span>明可夫斯基距离</span>, <span>明氏距离</span>, <span>Minkowski Distance</span>, <span>欧式距离</span>, <span>Euclidean Metric</span>, <span>曼哈顿距离</span>, <span>出租车距离</span>, <span>Manhattan Distance</span>, <span>切比雪夫距离</span>, <span>Chebyshev Distance</span>, <span>马哈拉诺比斯距离</span>, <span>马氏距离</span>, <span>Mahalanobis Distance</span>, <span>向量内积</span>, <span>Inner Product of Vectors</span>, <span>余弦距离</span>, <span>Cosine Distance</span>, <span>余弦相似度</span>, <span>Cosine Similarity</span>, <span>相关系数</span>, <span>Correlation</span>, <span>皮尔逊相关系数</span>, <span>Pearson Correlation</span>, <span>Jaccard 系数</span>, <span>Dice 系数</span>, <span>Tversky 系数</span>, <span>编辑距离</span>, <span>Edit Distance</span>, <span>莱文斯坦距离</span>, <span>Levenshtein Distance</span>, <span>汉明距离</span>, <span>Hamming Distance</span>, <span>熵</span>, <span>Entropy</span>, <span>条件熵</span>, <span>Conditional Entropy</span>, <span>联合熵</span>, <span>Joint Entropy</span>, <span>互信息</span>, <span>Mutual Information</span>, <span>相对熵</span>, <span>Relative Entropy</span>, <span>KL 散度</span>, <span>Kullback-Leibler Divergence</span>, <span>JS 散度</span>, <span>Jensen-Shannon Divergence</span>, <span>推土机距离</span>, <span>Earth Mover Distance</span>, <span>Wasserstein Distance</span>, <span>DTW 距离</span>, <span>Dynamic Time Warping Distance</span>, <span>流形距离</span>, <span>Disntace of Manifold</span>
+
+
+
+
+/
+
+
+<strong>字数: </strong>
+4205
+</h3>
+
+
+
+<hr>
+
+
+      </header>
+
+
+
+<div class="toc-depth-2" ><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#明可夫斯基距离-明氏距离-minkowski-distance">明可夫斯基距离 (明氏距离, Minkowski Distance)</a></li>
+<li><a href="#马哈拉诺比斯距离-马氏距离-mahalanobis-distance">马哈拉诺比斯距离 (马氏距离, Mahalanobis Distance)</a></li>
+<li><a href="#向量内积-inner-product-of-vectors">向量内积 (Inner Product of Vectors)</a></li>
+<li><a href="#集合距离-distance-of-sets">集合距离 (Distance of Sets)</a></li>
+<li><a href="#字符串距离-distance-of-strings">字符串距离 (Distance of Strings)</a></li>
+<li><a href="#信息论距离-information-theory-distance">信息论距离 (Information Theory Distance)</a></li>
+<li><a href="#其他距离-other-distance">其他距离 (Other Distance)</a></li>
+</ul></li>
+</ul>
+</nav></div> 
+
+
+
+
+<p>相似性度量 (Similarity Measurement) 用于衡量两个元素之间的相似性程度或两者之间的距离 (Distance)。距离衡量的是指元素之间的不相似性 (Dissimilarity)，通常情况下我们可以利用一个距离函数定义集合 <code>$X$</code> 上元素间的距离，即：</p>
+
+<p><code>$$
+d: X \times X \to \mathbb{R}
+$$</code></p>
+
+<p>同时，对于集合 <code>$X$</code> 内的元素 <code>$x, y, z$</code>，距离函数一般满足如下条件：</p>
+
+<ol>
+<li><code>$d \left(x, y\right) \geq 0$</code> (非负性)</li>
+<li><code>$d \left(x, y\right) = 0, \text{当且仅当} \ x = y$</code> (同一性)</li>
+<li><code>$d \left(x, y\right) = d \left(y, x\right)$</code> (对称性)</li>
+<li><code>$d \left(x, z\right) \leq d \left(x, y\right) + d \left(y, z\right)$</code> (三角不等式)</li>
+</ol>
+
+<h2 id="明可夫斯基距离-明氏距离-minkowski-distance">明可夫斯基距离 (明氏距离, Minkowski Distance)</h2>
+
+<p>对于点 <code>$x = \left(x_1, x_2, ..., x_n\right)$</code> 和点 <code>$y = \left(y_1, y_2, ..., y_n\right)$</code>，<code>$p$</code> <strong>阶明可夫斯基距离</strong> 定义为：</p>
+
+<p><code>$$
+d \left(x, y\right) = \left(\sum_{i=1}^{n} |x_i - y_i|^p\right)^{\frac{1}{p}}
+$$</code></p>
+
+<p>当 <code>$p = 1$</code> 时，称之为 <strong>曼哈顿距离 (Manhattan Distance)</strong> 或 <strong>出租车距离</strong>：</p>
+
+<p><code>$$
+d \left(x, y\right) = \sum_{i=1}^{n} |x_i - y_i|
+$$</code></p>
+
+<p>当 <code>$p = 2$</code> 时，称之为 <strong>欧式距离 (Euclidean Distance)</strong> ：</p>
+
+<p><code>$$
+d \left(x, y\right) = \sqrt{\sum_{i=1}^{n} \left(x_i - y_i\right)^2}
+$$</code></p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/manhattan-distance.svg" alt="Manhattan Distance" /></p>
+
+<p>上图中 <span style="color:#00d100;"><strong>绿色</strong></span> 的直线为两点间的欧式距离，<span style="color:#ff0000;"><strong>红色</strong></span> <span style="color:#ffd600;"><strong>黄色</strong></span> <span style="color:#0000ff;"><strong>蓝色</strong></span> 的折线均为两点间的曼哈顿距离，不难看出 3 条折线的长度是相同的。</p>
+
+<p>当 <code>$p \to \infty$</code> 时，称之为 <strong>切比雪夫距离 (Chebyshev Distance)</strong> ：</p>
+
+<p><code>$$
+d \left(x, y\right) = \lim_{p \to \infty} \left(\sum_{i=1}^{n} |x_i - y_i|^p\right)^{\frac{1}{p}} = \max_{i=1}^{n} |x_i - y_i|
+$$</code></p>
+
+<p>下图展示了不同的 <code>$p$</code> 值下单位圆，即 <code>$x^p + y^p = 1$</code>，便于大家理解不同 <code>$p$</code> 值下的明可夫斯基距离：</p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/2D-unit-balls.png" alt="2D Unit Balls" /></p>
+
+<h2 id="马哈拉诺比斯距离-马氏距离-mahalanobis-distance">马哈拉诺比斯距离 (马氏距离, Mahalanobis Distance)</h2>
+
+<p>马哈拉诺比斯距离表示数据的 <strong>协方差距离</strong>，与欧式距离不同其考虑到各种特性之间的联系是 <strong>尺度无关 (Scale Invariant)</strong> 的。对于一个协方差矩阵为 <code>$\sum$</code> 的变量 <code>$x$</code> 和 <code>$y$</code>，马氏距离定义为：</p>
+
+<p><code>$$
+d \left(x, y\right) = \sqrt{\left(x - y\right)^{\top} {\sum}^{-1} \left(x - y\right)}
+$$</code></p>
+
+<p>马氏距离的最大优势就是其不受不同维度之间量纲的影响，同时引入的问题便是扩大了变化量较小的变量的影响。以下图为例 (源码详见 <a href="https://github.com/leovan/leovan.me/tree/master/scripts/cn/2019-01-01-similarity-and-distance-measurement/mahalanobis-distance.R" rel="noreferrer" target="_blank">这里</a>)：</p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/mahalanobis-distance.png" alt="Mahalanobis Distance" /></p>
+
+<p>左侧图中根据欧式距离计算，<span style="color:#F07769;"><strong>红色</strong></span> 的点距离 <span style="color:#34BA27;"><strong>绿色</strong></span> 的点更近一些，右侧图是根据马氏距离进行座标变换后的示意图，不难看出此时 <span style="color:#F07769;"><strong>红色</strong></span> 的点距离 <span style="color:#6C9BFF;"><strong>蓝色</strong></span> 的点更近一些。</p>
+
+<h2 id="向量内积-inner-product-of-vectors">向量内积 (Inner Product of Vectors)</h2>
+
+<p>在欧几里得几何中，两个笛卡尔坐标向量的点积常称为内积，向量内积是两个向量的长度与它们夹角余弦的积，定义为：</p>
+
+<p><code>$$
+x \cdot y = \sum_{i=1}^{n}{x_i y_i}
+$$</code></p>
+
+<p>从代数角度看，先对两个数字序列中的每组对应元素求积，再对所有积求和，结果即为点积。从几何角度看，点积则是两个向量的长度与它们夹角余弦的积。在欧几里得空间中，点积可以直观地定义为：</p>
+
+<p><code>$$
+x \cdot y = \left| x \right| \left| y \right| \cos \theta
+$$</code></p>
+
+<p><strong>余弦相似度 (Cosine Similarity)</strong> 可以利用两个向量夹角的 cos 值定义，即：</p>
+
+<p><code>$$
+s \left(x, y\right) = \cos \left(\theta\right) = \dfrac{x \cdot y}{\left| x \right| \left| y \right|} = \dfrac{\sum_{i=1}^{n}{x_i y_i}}{\sqrt{\sum_{i=1}^{n}{x_i^2}} \sqrt{\sum_{i=1}^{n}{y_i^2}}}
+$$</code></p>
+
+<p>余弦相似度的取值范围为：<code>$\left[-1, 1\right]$</code>，1 表示两者完全正相关，-1 表示两者完全负相关，0 表示两者之间独立。余弦相似度与向量的长度无关，只与向量的方向有关，但余弦相似度会受到向量平移的影响。</p>
+
+<p><strong>皮尔逊相关系数 (Pearson Correlation)</strong> 解决了余弦相似度会收到向量平移影响的问题，其定义为：</p>
+
+<p><code>$$
+\rho \left(x, y\right) = \dfrac{\text{cov} \left(x, y\right)}{\sigma_x \sigma_y} = \dfrac{E \left[\left(x - \mu_x\right) \left(y - \mu_y\right)\right]}{\sigma_x \sigma_y}
+$$</code></p>
+
+<p>其中，<code>$\text{cov}$</code> 表示协方差，<code>$E$</code> 表示期望，<code>$\mu$</code> 表示均值，<code>$\sigma$</code> 表示标准差。对于样本的皮尔逊相关系数，可以通过如下方式计算：</p>
+
+<p><code>$$
+\begin{equation}
+\begin{split}
+r &amp;= \dfrac{\sum_{i=1}^{n}{\left(x_i - \bar{x}\right) \left(y_i - \bar{y}\right)}}{\sqrt{\sum_{i=1}^{n}{\left(x_i - \bar{x}\right)^2}} \sqrt{\sum_{i=1}^{n}{\left(y_i - \bar{y}\right)^2}}} \\
+&amp;= \dfrac{1}{n-1} \sum_{i=1}^{n}{\left(\dfrac{x_i - \bar{x}}{\sigma_x}\right) \left(\dfrac{y_i - \bar{y}}{\sigma_y}\right)}
+\end{split}
+\end{equation}
+$$</code></p>
+
+<p>皮尔逊相关系数的取值范围为：<code>$\left[-1, 1\right]$</code>，值的含义与余弦相似度相同。皮尔逊相关系数有一个重要的数学特性是：变量位置和尺度的变化并不会引起相关系数的改变。下图给出了不同的 <code>$\left(x, y\right)$</code> 之间的皮尔逊相关系数。</p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/correlation-examples.png" alt="Correlation Examples" /></p>
+
+<h2 id="集合距离-distance-of-sets">集合距离 (Distance of Sets)</h2>
+
+<p>对于两个集合之间的相似性度量，主要有如下几种方法：</p>
+
+<ul>
+<li><strong>Jaccard 系数</strong></li>
+</ul>
+
+<p><code>$$
+s = \dfrac{\left|X \cap Y\right|}{\left| X \cup Y \right|} = \dfrac{\left|X \cap Y\right|}{\left|X\right| + \left|Y\right| - \left|X \cap Y\right|}
+$$</code></p>
+
+<p>Jaccard 系数的取值范围为：<code>$\left[0, 1\right]$</code>，0 表示两个集合没有重合，1 表示两个集合完全重合。</p>
+
+<ul>
+<li><strong>Dice 系数</strong></li>
+</ul>
+
+<p><code>$$
+s = \dfrac{2 \left| X \cap Y \right|}{\left|X\right| + \left|Y\right|}
+$$</code></p>
+
+<p>与 Jaccard 系数相同，Dice 系数的取值范围为：<code>$\left[0, 1\right]$</code>，两者之间可以相互转换 <code>$s_d = 2 s_j / \left(1 + s_j\right), s_j = s_d / \left(2 - s_d\right)$</code>。不同于 Jaccard 系数，Dice 系数的差异函数 <code>$d = 1 - s$</code> 并不是一个合适的距离度量，因为其并不满足距离函数的三角不等式。</p>
+
+<ul>
+<li><strong>Tversky 系数</strong></li>
+</ul>
+
+<p><code>$$
+s = \dfrac{\left| X \cap Y \right|}{\left| X \cap Y \right| + \alpha \left| X \setminus Y \right| + \beta \left| Y \setminus X \right|}
+$$</code></p>
+
+<p>其中，<code>$X \setminus Y$</code> 表示集合的相对补集。Tversky 系数可以理解为 Jaccard 系数和 Dice 系数的一般化，当 <code>$\alpha = \beta = 1$</code> 时为 Jaccard 系数，当 <code>$\alpha = \beta = 0.5$</code> 时为 Dice 系数。</p>
+
+<h2 id="字符串距离-distance-of-strings">字符串距离 (Distance of Strings)</h2>
+
+<p>对于两个字符串之间的相似性度量，主要有如下几种方法：</p>
+
+<ul>
+<li><strong>Levenshtein 距离</strong></li>
+</ul>
+
+<p>Levenshtein 距离是 <strong>编辑距离 (Editor Distance)</strong> 的一种，指两个字串之间，由一个转成另一个所需的最少编辑操作次数。允许的编辑操作包括将一个字符替换成另一个字符，插入一个字符，删除一个字符。例如将 <strong>kitten</strong> 转成 <strong>sitting</strong>，转换过程如下：</p>
+
+<p><code>$$
+\begin{equation*}
+\begin{split}
+\text{kitten} \to \text{sitten} \left(k \to s\right) \\
+\text{sitten} \to \text{sittin} \left(e \to i\right) \\
+\text{sittin} \to \text{sitting} \left(\  \to g\right)
+\end{split}
+\end{equation*}
+$$</code></p>
+
+<p>编辑距离的求解可以利用动态规划的思想优化计算的时间复杂度。</p>
+
+<ul>
+<li><strong>Jaro-Winkler 距离</strong></li>
+</ul>
+
+<p>对于给定的两个字符串 <code>$s_1$</code> 和 <code>$s_2$</code>，Jaro 相似度定义为：</p>
+
+<p><code>$$
+sim =
+\begin{cases}
+0 &amp; \text{if} \  m = 0 \\
+\dfrac{1}{3} \left(\dfrac{m}{\left|s_1\right|} + \dfrac{m}{\left|s_2\right|} + \dfrac{m-t}{m}\right) &amp; \text{otherwise}
+\end{cases}
+$$</code></p>
+
+<p>其中，<code>$\left|s_i\right|$</code> 为字符串 <code>$s_i$</code> 的长度，<code>$m$</code> 为匹配的字符的个数，<code>$t$</code> 换位数目的一半。如果字符串 <code>$s_1$</code> 和 <code>$s_2$</code> 相差不超过 <code>$\lfloor \dfrac{\max \left(\left|s_1\right|, \left|s_2\right|\right)}{2} \rfloor - 1$</code>，我们则认为两个字符串是匹配的。例如，对于字符串 <strong>CRATE</strong> 和 <strong>TRACE</strong>，仅 <strong>R, A, E</strong> 三个字符是匹配的，因此 <code>$m = 3$</code>，尽管 <strong>C, T</strong> 均出现在两个字符串中，但是他们的距离超过了 1 (即，<code>$\lfloor \dfrac{5}{2} \rfloor - 1$</code>)，因此 <code>$t = 0$</code>。</p>
+
+<p>Jaro-Winkler 相似度给予了起始部分相同的字符串更高的分数，其定义为：</p>
+
+<p><code>$$
+sim_w = sim_j + l p \left(1 - sim_j\right)
+$$</code></p>
+
+<p>其中，<code>$sim_j$</code> 为字符串 <code>$s_1$</code> 和 <code>$s_2$</code> 的 Jaro 相似度，<code>$l$</code> 为共同前缀的长度 (规定不超过 <code>$4$</code>)，<code>$p$</code> 为调整系数 (规定不超过 <code>$0.25$</code>)，Winkler 将其设置为 <code>$p = 0.1$</code>。</p>
+
+<ul>
+<li><strong>汉明距离</strong></li>
+</ul>
+
+<p>汉明距离为两个<strong>等长字符串</strong>对应位置的不同字符的个数，也就是将一个字符串变换成另外一个字符串所需要<strong>替换</strong>的字符个数。例如：<strong>10<span style="color:#0000ff;">1</span>1<span style="color:#0000ff;">1</span>01</strong> 与 <strong>10<span style="color:#ff0000;">0</span>1<span style="color:#ff0000;">0</span>01</strong> 之间的汉明距离是 2，<strong>“<span style="color:#0000ff;">t</span>o<span style="color:#0000ff;">n</span>e<span style="color:#0000ff;">d</span>”</strong> 与 <strong>“<span style="color:#ff0000;">r</span>o<span style="color:#ff0000;">s</span>e<span style="color:#ff0000;">s</span>”</strong> 之间的汉明距离是 3。</p>
+
+<h2 id="信息论距离-information-theory-distance">信息论距离 (Information Theory Distance)</h2>
+
+<p>首先我们需要理解什么是 <strong>熵 (Entropy)</strong>？熵最早是用来表示物理学中一个热力系统无序的程度，后来依据香农的信息论，熵用来衡量一个随机变量的不确定性程度。对于一个随机变量 <code>$X$</code>，其概率分布为：</p>
+
+<p><code>$$
+P \left(X = x_i\right) = p_i, \quad i = 1, 2, ..., n
+$$</code></p>
+
+<p>则随机变量 <code>$X$</code> 的熵定义如下：</p>
+
+<p><code>$$
+H \left(X\right) = - \sum_{i=1}^{n} P \left(x_i\right) \log P \left(x_i\right) \label{eq:entropy}
+$$</code></p>
+
+<p>例如抛一枚硬币，假设硬币正面向上 <code>$X = 1$</code> 的概率为 <code>$p$</code>，硬币反面向上 <code>$X = 0$</code> 的概率为 <code>$1 - p$</code>。则对于抛一枚硬币那个面朝上这个随机变量 <code>$X$</code> 的熵为：</p>
+
+<p><code>$$
+H \left(X\right) = - p \log p - \left(1-p\right) \log \left(1-p\right)
+$$</code></p>
+
+<p>随概率 <code>$p$</code> 变化如下图所示：</p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/entropy-demo.png" alt="Entropy Demo" /></p>
+
+<p>从图可以看出，当 <code>$p = 0.5$</code> 时熵最大，也就是说抛一枚硬币，当正反两面朝上的概率相同时，熵最大，系统最复杂。对于公式 <code>$\ref{eq:entropy}$</code>，当取以 2 为底的对数时，熵的单位为比特 (bit)，当取自然对数时，熵的单位为纳特 (nat)，当取以 10 为底的对数时，熵的单位为哈特 (hart)。</p>
+
+<p>对于随机变量 <code>$\left(X, Y\right)$</code>，其联合概率分布为：</p>
+
+<p><code>$$
+P \left(X = x_i, Y = y_i\right) = p_{i, j}, \quad i = 1,2,...,n; \quad j = 1,2,...,m
+$$</code></p>
+
+<p><strong>条件熵 (Conditional Entropy)</strong> 表示在已知 <code>$X$</code> 的条件下 <code>$Y$</code> 的不确定性，定义为：</p>
+
+<p><code>$$
+\begin{equation}
+\begin{split}
+H \left(Y | X\right) &amp;= \sum_{i=i}^{n} P \left(x_i\right) H \left(Y | X = x_i\right) \\
+&amp;= \sum_{i=1}^{n}{\sum_{j=1}^{m}{P \left(x_i, y_j\right) \log \dfrac{P \left(x_i\right)}{P \left(x_i, y_j\right)}}}
+\end{split}
+\end{equation}
+$$</code></p>
+
+<p><strong>联合熵 (Joint Entropy)</strong> 用于衡量多个随机变量的随机系统的信息量，定义为：</p>
+
+<p><code>$$
+H \left(X, Y\right) = \sum_{i=1}^{n}{\sum_{j=1}^{m}{P \left(x_i, y_j\right) \log P \left(x_i, y_j\right)}}
+$$</code></p>
+
+<ul>
+<li><strong>互信息 (Mutual Information)</strong></li>
+</ul>
+
+<p>互信息用于衡量两个变量之间的关联程度，定义为：</p>
+
+<p><code>$$
+I \left(X; Y\right) = \sum_{i=1}^{n}{\sum_{j=1}^{m}{P \left(x_i, y_j\right) \log \dfrac{P \left(x_i, y_i\right)}{P \left(x_i\right) P \left(y_j\right)}}}
+$$</code></p>
+
+<p>直观上，互信息度量 <code>$X$</code> 和 <code>$Y$</code> 共享的信息，它度量知道这两个变量其中一个，对另一个不确定度减少的程度。</p>
+
+<ul>
+<li><strong>相对熵 (Relative Entropy)</strong></li>
+</ul>
+
+<p>相对熵又称之为 <strong>KL 散度 (Kullback-Leibler Divergence)</strong>，用于衡量两个分布之间的差异，定义为：</p>
+
+<p><code>$$
+D_{KL} \left(P \| Q\right) = \sum_{i}{P \left(i\right) \ln \dfrac{P \left(i\right)}{Q \left(i\right)}}
+$$</code></p>
+
+<p>KL 散度为非负数 <code>$D_{KL} \left(P \| Q\right) \geq 0$</code>，同时其不具有对称性 <code>$D_{KL} \left(P \| Q\right) \neq D_{KL} \left(Q \| P\right)$</code>，也不满足距离函数的三角不等式。</p>
+
+<ul>
+<li><strong>交叉熵 (Corss Entropy)</strong></li>
+</ul>
+
+<p>交叉熵定义为：</p>
+
+<p><code>$$
+\begin{equation}
+\begin{split}
+H \left(P, Q\right) &amp;= H \left(P\right) + D_{KL} \left(P \| Q\right) \\
+&amp;= - \sum_{i}{P \left(i\right) \log Q \left(i\right)}
+\end{split}
+\end{equation}
+$$</code></p>
+
+<p>交叉熵常作为机器学习中的损失函数，用于衡量模型分布和训练数据分布之间的差异性。</p>
+
+<ul>
+<li><strong>JS 散度 (Jensen-Shannon Divergence)</strong></li>
+</ul>
+
+<p>JS 散度解决了 KL 散度不对称的问题，定义为：</p>
+
+<p><code>$$
+D_{JS} \left(P \| Q\right) = \dfrac{1}{2} D_{KL} \left(P \| \dfrac{P + Q}{2}\right) + \dfrac{1}{2} D_{KL} \left(Q \| \dfrac{P + Q}{2}\right)
+$$</code></p>
+
+<p>当取以 2 为底的对数时，JS 散度的取值范围为：<code>$\left[0, 1\right]$</code>。</p>
+
+<ul>
+<li><strong>推土机距离 (Earth Mover Distance, Wasserstein Distance)</strong></li>
+</ul>
+
+<p>推土机距离用于描述两个多维分布之间相似性，之所以称为推土机距离是因为我们将分布看做空间中的泥土，两个分布之间的距离则是通过泥土的搬运将一个分布改变到另一个分布所消耗的最小能量 (即运送距离和运送重量的乘积)。</p>
+
+<p>对于给定的分布 <code>$P = \left\{\left(p_1, w_{p1}\right), \left(p_2, w_{p2}\right), \cdots, \left(p_m, w_{pm}\right)\right\}$</code> 和 <code>$Q = \left\{\left(q_1, w_{q1}\right), \left(q_2, w_{q2}\right), \cdots, \left(q_n, w_{qn}\right)\right\}$</code>，定义从 <code>$p_i$</code> 到 <code>$q_j$</code> 之间的距离为 <code>$d_{i, j}$</code>，所需运送的重量为 <code>$f_{i, j}$</code>。对于 <code>$f_{i, j}$</code> 有如下 4 个约束：</p>
+
+<ol>
+<li>运送需从 <code>$p_i$</code> 到 <code>$q_j$</code>，不能反向，即 <code>$f_{i, j} \geq 0, 1 \leq i \leq m, 1 \leq j \leq n$</code>。</li>
+<li>从 <code>$p_i$</code> 运送出的总重量不超过原始的总重量 <code>$w_{pi}$</code>，即 <code>$\sum_{j=1}^{n}{f_{i, j}} \leq w_{pi}, 1 \leq i \leq m$</code>。</li>
+<li>运送到 <code>$q_j$</code> 的总重量不超过其总容量 <code>$w_{qj}$</code>，即 <code>$\sum_{i=1}^{m}{f_{i, j}} \leq w_{qj}, 1 \leq j \leq n$</code>。</li>
+<li><code>$\sum_{i=1}^{m}{\sum_{j=1}^{n}{f_{i, j}}} = \min \left\{\sum_{i=1}^{m}{w_{pi}}, \sum_{j=1}^{n}{w_{qj}}\right\}$</code>。</li>
+</ol>
+
+<p>在此约束下，通过最小化损失函数：</p>
+
+<p><code>$$
+\min \sum_{i=1}^{m}{\sum_{j=1}^{n}{d_{i, j} f_{i, j}}}
+$$</code></p>
+
+<p>得到最优解 <code>$f_{i, j}^*$</code>，则推土机距离定义为：</p>
+
+<p><code>$$
+D_{W} \left(P, Q\right) = \dfrac{\sum_{i=1}^{m}{\sum_{j=1}^{n}{d_{i, j} f_{i, j}^*}}}{\sum_{i=1}^{m}{\sum_{j=1}^{n}{f_{i, j}^*}}}
+$$</code></p>
+
+<h2 id="其他距离-other-distance">其他距离 (Other Distance)</h2>
+
+<ul>
+<li><strong>DTW (Dynamic Time Warping) 距离</strong></li>
+</ul>
+
+<p>DTW 距离用于衡量两个序列之间的相似性，序列的长度可能相等也可能不相等。对于两个给定的序列 <code>$X = \left(x_1, x_2, \cdots, x_m\right)$</code> 和 <code>$Y = \left(y_1, y_2, \cdots, y_n\right)$</code>，我们可以利用动态规划的方法求解 DTW 距离。首先我们构造一个 <code>$m \times n$</code> 的矩阵，矩阵中的元素 <code>$d_{i, j}$</code> 表示 <code>$x_i$</code> 和 <code>$y_j$</code> 之间的距离。我们需要找到一条通过该矩阵的路径 <code>$W = \left(w_1, w_2, \cdots, w_l\right)$</code>, <code>$\max\left(m, n\right) \leq l &lt; m + n + 1$</code>，假设 <code>$w_k$</code> 对应的矩阵元素为 <code>$\left(i, j\right)$</code>，对应的距离为 <code>$d_k$</code>，则 DTW 的优化目标为 <code>$\min \sum_{k=1}^{l}{d_k}$</code>。如下图右上角部分所示：</p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/dtw-threeway.png" alt="DTW Three-Way" /></p>
+
+<p>对于路径 <code>$W$</code>，需要满足如下 3 个条件：</p>
+
+<ol>
+<li><strong>边界条件</strong>：<code>$w_1 = \left(1, 1\right), w_k = \left(m, n\right)$</code>，即路径须从左下角出发，在右上角终止。</li>
+<li><strong>连续性</strong>：对于 <code>$w_{l-1} = \left(i', j'\right), w_l = \left(i, j\right)$</code>，需满足 <code>$i - i' \leq 1, j - j' \leq 1$</code>，即路径不能跨过任何一点进行匹配。</li>
+<li><strong>单调性</strong>：对于 <code>$w_{l-1} = \left(i', j'\right), w_l = \left(i, j\right)$</code>，需满足 <code>$0 \leq i - i', 0 \leq j - j'$</code>，即路径上的点需单调递增，不能回退进行匹配。</li>
+</ol>
+
+<p>利用动态规划求解 DTW 的状态转移方程为：</p>
+
+<p><code>$$
+dtw_{i, j} =
+\begin{cases}
+0 &amp; \text{if} \  i = j = 0 \\
+\infty &amp; \text{if} \  i = 0 \  \text{or} \  j = 0 \\
+d_{i, j} + \min \left(dtw_{i-1, j}, dtw_{i-1, j-1}, dtw_{i, j-1}\right) &amp; \text{otherwise}
+\end{cases}
+$$</code></p>
+
+<p><code>$dtw_{m, n}$</code> 则为最终的 DTW 距离。在 DTW 求解的过程中还可以使用不同的 Local Warping Step 和窗口类型，更多详细信息可看见 R 中 <a href="https://cran.r-project.org/web/packages/dtw/index.html" rel="noreferrer" target="_blank">dtw 包</a>。下图展示了利用 DTW 求解后不同点之间的对应关系：</p>
+
+<p><img src="/images/cn/2019-01-01-similarity-and-distance-measurement/dtw-twoway.png" alt="DTW Two-Way" /></p>
+
+<ul>
+<li><strong>流形距离 (Distance of Manifold)</strong></li>
+</ul>
+
+<p>关于流形距离请参见之前的博客：<a href="/cn/2018/03/manifold-learning">流形学习 (Manifold Learning)</a>。</p>
+
+<h2>🎉🎉🎉 Happe New Year! 🎉🎉🎉</h2>
+
+
+
+<link rel="stylesheet" href="/css/donate.css" />
+
+
+<div class="donate">
+  <div class="donate-header"></div>
+  <div class="donate-slug" id="donate-slug">similarity-and-distance-measurement</div>
+  <button class="donate-button">赞 赏</button>
+  <div class="donate-footer">「真诚赞赏，手留余香」</div>
+</div>
+<div class="donate-modal-wrapper">
+  <div class="donate-modal">
+    <div class="donate-box">
+      <div class="donate-box-content">
+        <div class="donate-box-content-inner">
+          <div class="donate-box-header">「真诚赞赏，手留余香」</div>
+          <div class="donate-box-body">
+            <div class="donate-box-money">
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-2" data-v="2" data-unchecked="￥ 2" data-checked="2 元">￥ 2</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-5" data-v="5" data-unchecked="￥ 5" data-checked="5 元">￥ 5</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-10" data-v="10" data-unchecked="￥ 10" data-checked="10 元">￥ 10</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-50" data-v="50" data-unchecked="￥ 50" data-checked="50 元">￥ 50</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-100" data-v="100" data-unchecked="￥ 100" data-checked="100 元">￥ 100</button>
+              <button class="donate-box-money-button donate-box-money-button-unchecked" id="donate-box-money-button-custom" data-v="custom" data-unchecked="任意金额" data-checked="任意金额">任意金额</button>
+            </div>
+            <div class="donate-box-pay">
+              <img class="donate-box-pay-qrcode" id="donate-box-pay-qrcode" src=""/>
+            </div>
+          </div>
+          <div class="donate-box-footer">
+            <div class="donate-box-pay-method donate-box-pay-method-checked" data-v="wechat-pay">
+              <img class="donate-box-pay-method-image" id="donate-box-pay-method-image-wechat-pay" src=""/>
+            </div>
+            <div class="donate-box-pay-method" data-v="alipay">
+              <img class="donate-box-pay-method-image"  id="donate-box-pay-method-image-alipay" src=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="donate-box-close-button">
+      <svg class="donate-box-close-button-icon" fill="#fff" viewBox="0 0 24 24" width="24" height="24"><path d="M13.486 12l5.208-5.207a1.048 1.048 0 0 0-.006-1.483 1.046 1.046 0 0 0-1.482-.005L12 10.514 6.793 5.305a1.048 1.048 0 0 0-1.483.005 1.046 1.046 0 0 0-.005 1.483L10.514 12l-5.208 5.207a1.048 1.048 0 0 0 .006 1.483 1.046 1.046 0 0 0 1.482.005L12 13.486l5.207 5.208a1.048 1.048 0 0 0 1.483-.006 1.046 1.046 0 0 0 .005-1.482L13.486 12z" fill-rule="evenodd"></path></svg>
+    </button>
+  </div>
+</div>
+
+<script type="text/javascript" src="/js/donate.js"></script>
+</script>
+
+
+  <footer>
+  
+<nav class="post-nav">
+  <span class="nav-prev">&larr; <a href="/cn/2018/12/ensemble-learning/">集成学习算法 (Ensemble Learning)</a></span>
+  <span class="nav-next"><a href="/cn/2019/02/how-to-read-a-book/">如何阅读一本书 (How to Read a Book)</a> &rarr;</span>
+</nav>
+<script type="text/javascript">
+document.addEventListener('keyup', function(e) {
+  if (e.target.nodeName.toUpperCase() != 'BODY') return;
+  var url = false;
+  if (e.which == 37) {  
+    
+    url = '\/cn\/2018\/12\/ensemble-learning\/';
+    
+  } else if (e.which == 39) {  
+    
+    url = '\/cn\/2019\/02\/how-to-read-a-book\/';
+    
+  }
+  if (url) window.location = url;
+});
+</script>
+
+
+
+
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2608165017777396"
+     data-ad-slot="1261604535"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+
+
+<section class="comments">
+  <div id="disqus_thread"></div>
+  <script>
+  var disqus_config = function () {
+  
+    this.page.url = "https:\/\/zeqiang.fun" + location.pathname;
+  
+  };
+  (function() {
+    var inIFrame = function() {
+      var iframe = true;
+      try { iframe = window.self !== window.top; } catch (e) {}
+      return iframe;
+    };
+    if (inIFrame()) return;
+    var disqus_js = '//Zeqiang.disqus.com/embed.js';
+    var d = document, s = d.createElement('script');
+    s.src = disqus_js; s.async = true;
+    s.setAttribute('data-timestamp', +new Date());
+    var t = d.getElementById('disqus_thread');
+    var b = false, l = function(scroll) {
+      if (b) return;
+      (d.head || d.body).appendChild(s); b = true;
+      if (scroll) t.scrollIntoView();
+    }
+    s.onerror = function(e) {
+      if (sessionStorage.getItem('failure-note')) return;
+      t.innerText = 'Sorry, but you cannot make comments because Disqus failed to load for some reason. It is known to be blocked in China. If you are sure it is not blocked in your region, please refresh the page. 中国大陆地区读者需要翻墙才能发表评论。';
+      sessionStorage.setItem('failure-note', true);
+    };
+    
+    if (location.hash.match(/^#comment-[0-9]+$/)) return l(true);
+    var c = function() {
+      if (b) return;
+      var rect = t.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom >= 0) l();
+    };
+    window.addEventListener('load', c);
+    d.addEventListener('scroll', c);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
+
+
+
+
+<script async src="/js/fix-toc.js"></script>
+<script async src="/js/center-img.js"></script>
+<script async src="/js/right-quote.js"></script>
+<script async src="/js/fix-footnote.js"></script>
+<script async src="/js/external-link.js"></script>
+<script async src="/js/alt-title.js"></script>
+<script src="/js/no-highlight.js"></script>
+<script src="/js/math-code.js"></script>
+
+
+<script>
+window.MathJax = {
+  loader: {
+    load: ['[tex]/boldsymbol']
+  },
+  tex: {
+    tags: "all",
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    packages: {
+      '[+]': ['boldsymbol']
+    }
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-chtml.js" crossorigin></script>
+
+
+
+
+
+
+
+<script async src="/js/load-typekit.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/vanilla-back-to-top@latest/dist/vanilla-back-to-top.min.js"></script>
+<script>
+addBackToTop({
+  diameter: 48
+})
+</script>
+
+
+
+  <hr>
+  <div class="copyright no-border-bottom">
+    <div class="copyright-author-year">
+      <span>&copy; 2017-2021 Leo Van</span>
+    </div>
+    <div class="copyright-links">
+      <a href="https://github.com/leovan" rel="noreferrer" target="_blank">Github</a>
+      <span> · </span>
+      <a href="https://orcid.org/0000-0002-9556-7821" rel="noreferrer" target="_blank">ORCID</a>
+      <span> · </span>
+      <span>I am Mr. Black.</span>
+    </div>
+  </div>
+  </footer>
+  </article>
+  </body>
+</html>
+
