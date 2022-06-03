@@ -1,2 +1,4 @@
-# user_blogdown
-deploy the blog page
+# zeqiang.fun
+dev. version of personal blog
+
+This blog framework is developped by `blogdown` from **RStudio**
