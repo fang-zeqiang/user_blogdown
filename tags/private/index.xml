@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>private on Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/tags/private/</link>
+    <description>Recent content in private on Zeqiang Fang | 方泽强</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 27 Jan 2019 17:28:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeqiang.fun/tags/private/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>个人经历（详细）</title>
+      <link>https://zeqiang.fun/post/personal/myexperience/</link>
+      <pubDate>Sun, 27 Jan 2019 17:28:49 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/myexperience/</guid>
+      <description>中文简历内容v2.0 教育经历 伦敦大学学院 硕士 2020.09-2021.12 高级空间分析中心 空间数据科学与可视化 导师：Huanfa Chen GPA: 南京财经大学 本科 2016.09 - 2020.07 信息工程学院 软</description>
+    </item>
+    
+  </channel>
+</rss>

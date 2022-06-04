@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CCF on Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/tags/ccf/</link>
+    <description>Recent content in CCF on Zeqiang Fang | 方泽强</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 15 Aug 2019 23:50:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeqiang.fun/tags/ccf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>🔥基于Python的CCF模拟題解析（持续更新）</title>
+      <link>https://zeqiang.fun/post/techstack/ccf_set/</link>
+      <pubDate>Thu, 15 Aug 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/ccf_set/</guid>
+      <description>&lt;p&gt;来自&lt;a href=&#34;http://118.190.20.162/home.page&#34;&gt;ccf官网&lt;/a&gt;的模拟考題，报名后即可查看&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cheatsheet on Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/tags/cheatsheet/</link>
+    <description>Recent content in cheatsheet on Zeqiang Fang | 方泽强</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 Dec 2020 12:22:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeqiang.fun/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown Cheatsheet</title>
+      <link>https://zeqiang.fun/post/techstack/mdcheatsheet/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/mdcheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>🔥关于各种快捷键令人头疼必须特地写篇文章一事</title>
+      <link>https://zeqiang.fun/post/notes/shortcut_for_all/</link>
+      <pubDate>Fri, 25 Dec 2020 12:22:25 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/shortcut_for_all/</guid>
+      <description>&lt;p&gt;These troublesome shortcode operation is based on the MacOS systems :-). If you are Windows users, you can try to replace &lt;code&gt;CMD&lt;/code&gt; with &lt;code&gt;CTRL&lt;/code&gt; to success run these shortcuts.&lt;/p&gt;
+
+&lt;p&gt;人的记忆终究是有极限的呀！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>结合JavaScript直接抓取网站内容</title>
+      <link>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</link>
+      <pubDate>Wed, 14 Aug 2019 00:09:26 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</guid>
+      <description>&lt;p&gt;该方法用于解决“爬虫操作繁琐与手动复制太累”的情况&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于Hugo与Github建立自己的博客</title>
+      <link>https://zeqiang.fun/post/techstack/bulid-a-blog/</link>
+      <pubDate>Sat, 27 Jul 2019 14:31:12 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/bulid-a-blog/</guid>
+      <description>&lt;p&gt;为了总结经验，笔者借此写下利用hugo与github来建立自己的博客的经验，欢迎交流&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

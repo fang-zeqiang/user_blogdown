@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Web Development Group Project: Project Abeona - UK Traffic Accidents Studying - Zeqiang Fang | 方泽强</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Zeqiang Fang" /><meta name="description" content="CASA17 Web Architecture - Group Report
+" /><meta name="keywords" content="Mac, Software Engineer, Python, Echarts" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.1 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://zeqiang.fun/post/techstack/project_abeona/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Web Development Group Project: Project Abeona - UK Traffic Accidents Studying" />
+<meta property="og:description" content="CASA17 Web Architecture - Group Report" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeqiang.fun/post/techstack/project_abeona/" />
+<meta property="article:published_time" content="2021-04-23T11:37:33&#43;08:00"/>
+<meta property="article:modified_time" content="2021-04-23T11:37:33&#43;08:00"/>
+
+<meta itemprop="name" content="Web Development Group Project: Project Abeona - UK Traffic Accidents Studying">
+<meta itemprop="description" content="CASA17 Web Architecture - Group Report">
+
+
+<meta itemprop="datePublished" content="2021-04-23T11:37:33&#43;08:00" />
+<meta itemprop="dateModified" content="2021-04-23T11:37:33&#43;08:00" />
+<meta itemprop="wordCount" content="3941">
+
+
+
+<meta itemprop="keywords" content="Javascripts,Bootstrap,D3js," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Web Development Group Project: Project Abeona - UK Traffic Accidents Studying"/>
+<meta name="twitter:description" content="CASA17 Web Architecture - Group Report"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Zeqiang Fang</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/cv-cn/">
+        <li class="mobile-menu-item">简历</li>
+      </a><a href="/friendlink/">
+        <li class="mobile-menu-item">友情链接</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Zeqiang Fang</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cv-cn/">简历</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/friendlink/">友情链接</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Web Development Group Project: Project Abeona - UK Traffic Accidents Studying</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-04-23 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+            </div>
+          <span class="more-meta"> 约 3941 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>CASA17 Web Architecture - Group Report</p>
+
+<p>Website: <a href="https://casa-ucl.github.io/casa0017---final-group-assignment-jedi/demoSite/index.html">Traffic Accident Map</a></p>
+
+<p>Github Repo: <a href="https://github.com/casa-ucl/casa0017---final-group-assignment-jedi">casa-ucl/casa0017&mdash;final-group-assignment-jedi</a></p>
+
+
+
+<iframe
+    src="//zeqiang.fun/Project_Abeona/demoSite/"
+    scrolling="no"
+    height="427px"
+    width="760px"
+    frameborder="no"
+    framespacing="0"
+    allowfullscreen="true"
+>
+</iframe>
+
+<h1 id="1-introduction">1. Introduction</h1>
+
+<p>The story we want to tell is what kind of condition is more likely to make a traffic accident happen from the big data perspective. Our website is called Project Abeona. “Abeona” has been mentioned in the World Goddess Oracle of Thalia Took website as presented below.</p>
+
+<p><em>“Abeona is the Roman Goddess of outward journeys, Who watches over a child&rsquo;s steps and protects travellers.”</em></p>
+
+<p>The inspiration of our project is from a study which used time-series analysis to investigate the trend of UK’s traffic accidents (Ljubič et al, 2007). Based on this research, we want to explore more factors that might have some relationships with traffic accidents in the UK. Related research teams also have conducted related studies on weather conditions and the frequency of traffic accidents. Anna et al found that there is a positive correlation between frost weather and the number of accidents, which is meaningful for cities to adopt corresponding traffic accident prevention policies and measures (Andersson and Chapman, 2011)</p>
+
+<p>Our team hopes to deliver our concern of the safety of  people’s journey such as urban commute and travelling to our website visitors. We are concerned about the natural and traffic infrastructure factors which might affect accident cases partially and respectively such as date, light and weather conditions.</p>
+
+<p>This project also encourages that not only can non-technical users visit our website to quickly know our key findings and some relative recommendations but also professional people can explore our interactive map to find what they want to research.</p>
+
+<h1 id="2-design">2. Design</h1>
+
+<h2 id="2-1-outline-of-website">2.1 Outline of Website</h2>
+
+<p>Our website consists of two parts, the main part contains the maps, and the other part called “About” consists of all textual descriptions of what we did.</p>
+
+<p>The main section has a short introduction, showing our project name and mapping objectives, and then showing the maps one by one. And after looking at the maps there will be a button to guide visitors to the “About” page where we show our project details (both informative and technical aspects). Lastly the footer section where we display our team names and Github links to our repository.</p>
+
+<h3 id="2-1-1-about">2.1.1 About</h3>
+
+<p>Our about section included knowledge on our project aims, background, data source, and other items that are essential for a better understanding of our map. We created 3 maps, and we have 3 cards that describe what the maps are about, and it will link back to the map section in the main section.</p>
+
+<p>In the latter part, we have a FAQ section, for visitors that have questions in hand, therefore we created a FAQ section to contain common questions our visitors want to know. For example technical details of what framework we used to create the maps and this website.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image12.png" alt="Figure 1 Storyboard of our website" /></p>
+
+<h3 id="2-1-2-interactive-maps">2.1.2 Interactive Maps</h3>
+
+<p>As the main section of data visualisation, we try to design the maps more meaningful and tell users from the big data, in London, which scenes are more prone to an accident. In map 1, we use radial graphs to show the occurrence of car accidents in London on a time scale. We hope that users can get inspired and find out the time-slot and day of the week when car accidents occur most frequently.</p>
+
+<p>Table 1</p>
+
+<table>
+<thead>
+<tr>
+<th>Feature:</th>
+<th>:Description(time radial chart)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Hover</td>
+<td>Display the detailed information of every time-slot, including ‘year’,’Accident Count’,‘Year’,’Time’.</td>
+</tr>
+
+<tr>
+<td>Radial lines</td>
+<td>Count the number of car accidents that occurred every 15 minutes on different days of the week throughout the year, and draw circular radial lines.</td>
+</tr>
+
+<tr>
+<td>Concentric circles</td>
+<td>Display the 9 radial lines of 9 years in the form of 9 concentric circles.</td>
+</tr>
+
+<tr>
+<td>Time scale line</td>
+<td>Use a straight line to mark days of the week and the daily ‘6AM’, ‘12PM’ and ‘6PM’ to help users better understand the chart.</td>
+</tr>
+</tbody>
+</table>
+
+<p>In map 2, users can see the specific time and location of a car accident in London under various natural conditions. By comparing the number of car accident layers on the map, users can know whether the corresponding natural conditions are relevant to the occurrence of the car accident.</p>
+
+<p>Feature
+    Description(interactive map)
+    Hover
+    Display the detailed information of each accident, including ‘Date’,’Weather Condition’,’Light Condition’.<br />
+    Slider
+    Show accidents happen in different years when the user moves the slider.
+    Filters
+    Users can see the frequency of accidents happening on their planned routes under different conditions.
+    Zoom in/out
+    The size of circle layers will change automatically as the user zooms in or out the interactive map.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Table 2</pre></td></tr></table>
+</div>
+</div>
+<p>Feature
+    Description(bar charts)
+    Hover
+    Display the information of specific types of nature conditions and the number of accidents. Besides, a dotted line will be extended to x-axis to point out which interval the quantity is in.
+    Switch Buttons
+    Switch different types of nature conditions by clicking the three buttons.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Table 3</pre></td></tr></table>
+</div>
+</div>
+<p>In map 3, we summarised the number of car accidents on different classes of roads, and furthermore users are told that severity in accidents on a high-class road is often more serious.
+Feature
+    Description
+    Map
+    Loaded with the road network vector data of London, users can freely select 4 classes of roads including &ldquo;Motorway&rdquo;, &ldquo;A-Road&rdquo;, &ldquo;B-Road&rdquo; and &ldquo;Unclassified Road&rdquo;.
+    Bar charts
+    The bar chart on the left shows the number of accidents on 4 road classes, and the one at the bottom further shows the severity of traffic accidents on the selected road class.
+    Line chart
+    The line chart shows the percentage change of fatal accidents on the four road classes.
+    Switch
+    Switch the bar chart and line chart on the left.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Table 4</pre></td></tr></table>
+</div>
+</div>
+<h2 id="2-2-frontend-framework">2.2 Frontend Framework</h2>
+
+<p>Bootstrap was used to make most parts of the website. Bootstrap was chosen because of its ability to get a decent layout going without the need to specify lots of parameters, and worry about the responsive abilities of the site later on. Since the maps are produced in another platform, and exported as a html, there will be compatibility issues, but it will be addressed later.</p>
+
+<p>We mainly use libraries that are hosted online, so we just need to make sure we are using the latest link to the cloud server instead of downloading the whole library to our local folder and manually updating it for maintenance purposes. We use quite a lot of web libraries (fonts, icons) that will ultimately slow down the site when in slow broadband, but even if we load it to a local folder, users need to load it using bandwidth from our server (Github) anyway.</p>
+
+<h2 id="2-3-backend-service">2.3 Backend Service</h2>
+
+<p>In this project, the concept of front-end and back-end separation is introduced to our development process. Data visualisation components placed on the frontend page such as line charts, bar charts can load data from the back-end through querying action. These charts presented in the frontend page can be updated only by updating the data in the database. As shown in figure 2, when the user accesses the frontend charts, the backend section will send a data querying request to the MySQL database. Then, the backend can receive the result and display it on the webpage through the data visualisation chart for the user to see and interact.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image1.png" alt="Figure 2 Node.js-MySQL backend framework" /></p>
+
+<h1 id="3-development">3. Development</h1>
+
+<h2 id="3-1-data">3.1 Data</h2>
+
+<p>The dataset used by Map 1 and Map 2 is the entire 1.6 million UK traffic accident recording. Map 3 also uses the UK road network shapefile.</p>
+
+<p>The first file is in csv format and comes from kaggle.</p>
+
+<p>The link is: <a href="https://www.kaggle.com/daveianhickey/2000-16-traffic-flow-england-scotland-wales">1.6 million UK traffic accidents | Kaggle</a></p>
+
+<p>The second file is in shp format and comes from OS OpenData.</p>
+
+<p>The link is: <a href="https://osdatahub.os.uk/downloads/open/OpenRoads">Request Rejected</a></p>
+
+<p>The original dataset used by Map 1 and Map 2 contains all records of traffic accidents that happened in the UK. Since our project is aimed at exploring the accident in London, the areas other than London are excluded by filtering the rows that include ‘E09’. Then we use python to process the data of each year.</p>
+
+<p>Firstly, the car accident records in London are counted according to the different values of column Day_of_Week. However, the frequency distribution of accidents based on such a time-slot does not have obvious fluctuations. We need to apply a smaller one to get better visualization results. Thus, while maintaining the previous work we continue to count based on the values of column, Time. The final time-slot for counting is set to 15 minutes.</p>
+
+<p>The Dataset used in Map 2 part is processed by Python as well. Then, since there are too many columns which will not be used in our visualization, only eight columns are kept to reduce the file size &mdash;- Longitude, Latitude, Data, Accident_Severity, Light_Condition, Weather_Condition, Road_Surface_Condition and Year. Finally, the formats of dataset are transformed into .geojson and .tsv for making the interactive map and bar charts, respectively.</p>
+
+<p>Our team applies python to process the csv data, by filtering the Accident_Severity, 1st_Road_Class and 2nd_Road_Class columns, we get the severity of the accident on the corresponding road class. It is worth mentioning that the values of the Accident_Severity column in the table are 1, 2, and 3, respectively indicating the severity of the accident is Fatal, Serious, and Slight. We found this definition in the official report of the UK government (Reported Road Casualties in Great Britain: notes, definitions, symbols and conventions – 2017).</p>
+
+<p>Since the vector tileset, Mapbox Streets v8, provided by mapbox does not have city attributes and correct road class attributes, we need to find the appropriate road network vector file by ourselves. First, we get a polygon that defines the outline of the London area in QGIS, and then use the clip function in QGIS to clip the downloaded shapefile of the entire UK road network. In the end, we got the London road network data that has the correct road class attributes.</p>
+
+<p>In the backend section, the data handling is mainly in changing different querying SQL statements. The feature of data selection and handling can be seen in table 5.</p>
+
+<p>SQL statements
+    Feature Description
+    concat(Date, Time)
+    merge two string texts Date &amp; Time into timestamp format
+    str_to_date(Date,&lsquo;%d/%m/%Y&rsquo;)
+str_to_date(Time,&lsquo;%H:%i&rsquo;)
+    transform the text into custom datetime format
+    Group by
+    group the cases’ record  by <code>road_type</code> attributes to make further data processing such as <code>count()</code>
+    Order by
+    Sort the querying results in ascending order
+    Table 5</p>
+
+<h2 id="3-2-frontend">3.2 Frontend</h2>
+
+<p>The layout of the website is created using Bootstrap with reference to an open source Bootstrap theme found online, mass modifications were done to suit our needs. The free theme was a one page simple website with many components such as a feedback form linkable to an email address, FAQ section with collapsible answers, fancy animations that do not add much to the user experience and therefore removed.</p>
+
+<p>The original color theme and fonts used were very formal, therefore we used Google fonts to replace the whole website’s fonts. Google fonts were chosen because it is convenient and more lightweight compared to importing a fontset downloaded to our asset folder, it only requires adding the api link to our header section and changing the name of the font-family in the css file. It is relatively easier to manage if we decided to switch fonts later on.</p>
+
+<p>For aesthetics purposes, we also changed the background picture to a more related picture. There are lots of words and paragraphs within the about section, therefore adjustments to line spacing and font sizes were made to make reading more pleasant.</p>
+
+<p>For interactivity, the navigation bar can auto scroll to the related section, and a back to top button because our website is a bit long.</p>
+
+<h2 id="3-3-map-compatibility">3.3 Map Compatibility</h2>
+
+<p>Maps produced using d3 and Mapbox by our teammates did not include any styling rules.  They are then fitted into a bootstrap framework for quick styling to match with our overall website style. Also, since the maps come in html format, an &lt;iframe&gt; element is used to display the maps within our website inside a container. In Map 2, 3 different maps are put into one single &lt;iframe&gt; element, because the 3 maps were linked together using a button group provided by Bootstrap, it is displayed in one single &lt;iframe&gt; element.</p>
+
+<p>Because it is loading too slow, the preloader section into the maps, which led to the need to include the css and javascript of the main section. After reading the Mapbox guide to make it load faster, the “optimise=T” line was added to the sources, but our team cannot find a way to speed up the d3 graphs.</p>
+
+<h2 id="3-4-backend-development">3.4 Backend Development</h2>
+
+<p>The backend key section includes a simple frontend page, NodeJS service and MySQL database as shown in figure 3. The way of data communication is the JSON format delivery. Express.js will send the querying statements to MySQL. The querying results will be sent via JSON to the API programme before being loaded to present in a chart in the website page.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image7.png" alt="Figure 3 Backend development technology application and process" /></p>
+
+<p>This backend demo involved the JQuery, HighCharts package and ExpressJS which run in the NodeJS environment.  The reason why utilise the bower package management is because the size of bower is much smaller than one of npm packages.</p>
+
+<p>As shown in figure 4, when querying a small size of data, the bar and line chart can be visualised in these two different styles. The tooltip feature can be seen in the (b) figure which presents the road types and the number of vehicles.</p>
+
+<ol>
+<li>Bar chart
+<img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image6.png" alt="Figure 4 The bar &amp; line chart with data from MySQL (limit 5 querying)a" /></li>
+<li>Line chart
+<img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image2.png" alt="Figure 4 The bar &amp; line chart with data from MySQL (limit 5 querying)b" /></li>
+</ol>
+
+<p>The larger size of data is loaded in the highcharts can be seen in figure 5. The line chart (b) seems like a bar chart because of limited space for big data. The road types highlighted by colour can be seen in these two charts. The Slip road and Dual carriageway account for the largest section among these 5 types.</p>
+
+<ol>
+<li>Bar chart
+<img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image10.png" alt="Figure 5 The bar &amp; line chart with data from MySQL (no limit querying)" /></li>
+<li>Line chart
+<img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image9.png" alt="Figure 5 The bar &amp; line chart with data from MySQL (no limit querying)" /></li>
+</ol>
+
+<h2 id="3-4-data-visualisation">3.4 Data Visualisation</h2>
+
+<h3 id="3-4-1-temporal-radial-chart">3.4.1 Temporal Radial Chart</h3>
+
+<p>Map 1 is mainly produced using D3.js. Before explaining the specific implementation of the main functions in Figure 6 above, relevant variables need to be defined. It is worth mentioning that the d3.scaleLinear() function is used. The time-slot used above is 15 minutes, but in the SVG we actually divide the entire circle into 7 * 24 * 60 parts, representing each minute of 7 days a week. We use the scale function to ‘map’ data values to visual variables and get an angle variable representing one minute, which will be used in the code of many functions later. Other uses include but are not limited to assigning gradient colors to 9 radial lines within a given range.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image11.png" alt="Figure 6 Temporal radial graph in map 1" /></p>
+
+<p>In the Radial text part, we refer to lines 55-62 of the code in the Tree of life chart in D3 Gallery. As for the Time scale line part, it can be done using the angle variable defined earlier and the given radius value. In the Hover part, we use .tooltip to complete. We draw 7*24*4 scatter points on each radial line to correspond to the time-slot, and then design the &lsquo;mouseover&rsquo; and &lsquo;mouseout&rsquo; events to be triggered when the mouse moves to the points and when it leaves the points , The former shows the window, the latter hides the window. For the Radial line part, we use d3.lineRadial() function to finish. Since our data layering is not obvious, if 9 radial lines were drawn directly, all the lines would be mixed together, as shown in Figure 7.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image8.png" alt="Figure 7 Radial line graph in map 1" /></p>
+
+<p>Therefore, for the data before being converted into a radius using the scale function, we increment a basic value according to different years. In this way we have constructed a series of Concentric circles with 9 radial lines. The key part of codes is shown below</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-javascripts" data-lang="javascripts"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascripts" data-lang="javascripts">var basicValue = item[valueName];
+dataValues.push([
+   i * 15,
+   basicValue + minValue / datalist.length * (index + 1),
+   ...)];</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="3-4-2-interactive-map-2">3.4.2 Interactive Map 2</h3>
+
+<p>In the Map 2 part, the interactive bar charts are made by Dimple.js and really simple, so the technical development of this section does not need much explanation. As to the interactive map section, three main functions added here are ‘hover effect’, ‘slider’ and ‘filter’.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image5.png" alt="Figure 8 Pop up window in map 2" /></p>
+
+<p>Firstly, as can be seen from the figure above, when the user’s mouse is moved onto the circle layer, some detailed information of that accident will be displayed in a pop up window. This is because a ’mouseover’ event is designed here, which will be triggered by mouse-over action. Afterwards, when the user’s mouse leaves the circle layer, the pop up window will disappear automatically by triggering the ‘mouseleave’ event.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image8.png" alt="Figure 9 Console in map 2" /></p>
+
+<p>Secondly, a slider is designed at the top of the console to show the accidents happened in different years. The user can choose any year he/she wants by dragging the slider, which will change the value of ‘year’ inside, thus the text above the slider will change automatically by getting the value of ‘year’. At the same time, the layers on the map will be filtered based on the value of current ‘year’. Finally, three groups of radio buttons are added below, indicating three types of nature condition &mdash;- ‘Road Surface condition’, ‘Light condition’ and ‘Weather condition’. Actually the way to filter these accidents under specific nature conditions is similar to the way how we filter the year above. The difference is that we use a slider to change the value of ‘year’ and use radio buttons to change the value of different conditions.</p>
+
+<h3 id="3-4-3-interactive-map-3">3.4.3 Interactive Map 3</h3>
+
+<p>We must admit that the design of map 3 was inspired by the first map, global population, from the excellent work of CASA0003 last year(Invisible Cities - Paris throughout Time, 2020), which was provided by Duncan.</p>
+
+<p>Our team chose to use the ECharts library to generate charts, including Line chart and Bar chart. For echarts, they are the basic graphic types. In this part, we follow the code in the official tutorials and examples to complete.</p>
+
+<p>In the official example, it is also recommended to import the jQuery library. We use jQuery to complete the Switch, which allows users to repeatedly switch the number of car accidents and the severity for comparison.</p>
+
+<p>We used mapbox to generate the map, and the map has only one layer. We use map.setFilter() to filter roads. When the value of ‘class’ in the loaded road network data matches the options selected by the user, the corresponding road is selected on the map.In addition, the ‘text’ at the bottom is defined in options with const at the beginning of codes.</p>
+
+<p><img src="https://raw.githubusercontent.com/casa-ucl/casa0017---final-group-assignment-jedi/main/Group%20Report/images/image4.png" alt="Figure 10 Features in the map 3" /></p>
+
+<h1 id="4-conclusion">4. Conclusion</h1>
+
+<p>There are several points where the backend demo can be improved. The optimisation of loading big data can be applied. For example, the heatmap calendar can be introduced to better display traffic cases hierarchically. The local backend service is less likely to provide online querying service for frontend charts or map. Therefore, the deployment of NodeJS backend programme in the accessible server is of importance for further website operation.</p>
+
+<p>For frontend, loading times for the maps are not very ideal, the datasets were all very heavy, and d3 loads really slow so that a spinner was added to let the user know it is not bugged, it is just loading. However, if given enough time, our team would use a carousel or slider to display the 3 barplots, and find a way to resize the fixed sized svg charts produced by d3 instead of letting the iframe element zoom to the top corner when the viewport gets smaller (ie. mobile viewing). Ranking lightweight as the first priority, our team would want the maps to load when the user lands instead of loading when that section is active. And our team should have picked up D3 and made Map 2 fit the window, if the dimension ratio was set to 16x9 it would trim the bottom parts away, but if we use the 4x3 ratio, there is lots of white space below which is not very aesthetically pleasing.</p>
+
+<p>Also, for future maintenance purposes, the css codes and javascript codes located in every external map file should be unified with our own css and javascript files, so when there is anything that needs to be changed we can find everything in one place. And also improve the html code itself because some inline styles were used, that could become an issue when it builds up and becomes too scattered to manage effectively.</p>
+
+<p>In the map making section, due to the large size of the dataset, the interactive map loads a bit slow. Thus, only the data between 2012 and 2014 are kept to ensure the loading speed of the website. Moreover, as to the bar charts, since the number of accidents is counted by javascript, the loading speed is very slow, either. If given more time, firstly, we would figure out the way to use other formats of data, excepting .geojson.(since it is too large) Secondly, maybe it will load much faster if we give the bar charts some number directly other than let the javascript count the total number of each nature condition.</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><p>Andersson, A. and Chapman, L., 2011. The impact of climate change on winter road maintenance and traffic accidents in West Midlands, UK. Accident Analysis &amp; Prevention, 43(1), pp.284-289.</p></li>
+
+<li><p>Ljubič, P., Todorovski, L., Lavrač, N. and Bullas, J.C., 2002. Time-series analysis of uk traffic accident data. In Proceedings of the Fifth International Multi-conference Information Society (pp. 131-134).</p></li>
+
+<li><p>Observablehq.com. 2021. Tree of Life. [online] Available at: <a href="https://observablehq.com/@mbostock/tree-of-life">https://observablehq.com/@mbostock/tree-of-life</a> [Accessed 21 April 2021].</p></li>
+
+<li><p>Reported Road Casualties in Great Britain: notes, definitions, symbols and conventions – 2017. [ebook] London: UK government, p.4. Available at: <a href="https://www.gov.uk/government/publications/road-accidents-and-safety-statistics-guidance">https://www.gov.uk/government/publications/road-accidents-and-safety-statistics-guidance</a> [Accessed 21 April 2021].</p></li>
+
+<li><p>Took, T., 2021. Abeona, Roman Goddess of Journeys. [online] Thaliatook.com. Available at: <a href="http://www.thaliatook.com/OGOD/abeona.php">http://www.thaliatook.com/OGOD/abeona.php</a> [Accessed 20 April 2021].</p></li>
+
+<li><p>World Atlas, London, United Kingdom - Detailed Climate Information and Monthly Weather Forecast - 2021. [Online] Available at:<a href="https://www.weather-atlas.com/en/united-kingdom/london-climate">https://www.weather-atlas.com/en/united-kingdom/london-climate</a> [Accessed 21 April 2021]</p></li>
+</ul>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/javascripts/">Javascripts</a>
+          <a href="/tags/bootstrap/">Bootstrap</a>
+          <a href="/tags/d3js/">D3js</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/techstack/github_lfs/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to upload large file to your Github repository? </span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/techstack/2013_aws_visualisation/">
+            <span class="next-text nav-default">Individual Project: 2013 AWS Honeypot Attacks Visualisation</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  <span id="/post/techstack/project_abeona/" class="leancloud_visitors" data-flag-title="Web Development Group Project: Project Abeona - UK Traffic Accidents Studying">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'coQHDtd3wfXbUbhqckEOviU4-gzGzoHsz',
+        appKey: '2Ryt2Onv8FtrU0izHHFVO9kN',
+        notify:  true , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zeqiangfang@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/fang-zeqiang" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/9199910" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://zeqiang.fun/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Zeqiang Fang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

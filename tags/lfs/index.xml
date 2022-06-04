@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LFS on Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/tags/lfs/</link>
+    <description>Recent content in LFS on Zeqiang Fang | 方泽强</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 May 2021 16:56:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeqiang.fun/tags/lfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to upload large file to your Github repository? </title>
+      <link>https://zeqiang.fun/post/techstack/github_lfs/</link>
+      <pubDate>Sun, 23 May 2021 16:56:43 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/github_lfs/</guid>
+      <description>&lt;p&gt;Git-LFS can help!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

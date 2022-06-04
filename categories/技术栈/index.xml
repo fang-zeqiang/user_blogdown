@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术栈 on Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/</link>
+    <description>Recent content in 技术栈 on Zeqiang Fang | 方泽强</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 May 2021 16:56:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeqiang.fun/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Markdown Cheatsheet</title>
+      <link>https://zeqiang.fun/post/techstack/mdcheatsheet/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/mdcheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to upload large file to your Github repository? </title>
+      <link>https://zeqiang.fun/post/techstack/github_lfs/</link>
+      <pubDate>Sun, 23 May 2021 16:56:43 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/github_lfs/</guid>
+      <description>&lt;p&gt;Git-LFS can help!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web Development Group Project: Project Abeona - UK Traffic Accidents Studying</title>
+      <link>https://zeqiang.fun/post/techstack/project_abeona/</link>
+      <pubDate>Fri, 23 Apr 2021 11:37:33 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/project_abeona/</guid>
+      <description>&lt;p&gt;CASA17 Web Architecture - Group Report&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Individual Project: 2013 AWS Honeypot Attacks Visualisation</title>
+      <link>https://zeqiang.fun/post/techstack/2013_aws_visualisation/</link>
+      <pubDate>Fri, 23 Apr 2021 10:29:30 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/2013_aws_visualisation/</guid>
+      <description>&lt;p&gt;This is my first individual digital visualisation project about the AWS server attacks.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>🔥关于各种快捷键令人头疼必须特地写篇文章一事</title>
+      <link>https://zeqiang.fun/post/notes/shortcut_for_all/</link>
+      <pubDate>Fri, 25 Dec 2020 12:22:25 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/shortcut_for_all/</guid>
+      <description>&lt;p&gt;These troublesome shortcode operation is based on the MacOS systems :-). If you are Windows users, you can try to replace &lt;code&gt;CMD&lt;/code&gt; with &lt;code&gt;CTRL&lt;/code&gt; to success run these shortcuts.&lt;/p&gt;
+
+&lt;p&gt;人的记忆终究是有极限的呀！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于文本挖掘分析谷歌招聘信息项目</title>
+      <link>https://zeqiang.fun/post/techstack/how-to-get-google/</link>
+      <pubDate>Mon, 20 Jan 2020 10:53:54 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/how-to-get-google/</guid>
+      <description>&lt;p&gt;结合Python与Echarts的数据挖掘项目&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何在Hugo静态博客中嵌入echarts图表</title>
+      <link>https://zeqiang.fun/post/techstack/echarts/</link>
+      <pubDate>Fri, 15 Nov 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/echarts/</guid>
+      <description>&lt;p&gt;数据可视化嵌入实验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>🔥基于Python的CCF模拟題解析（持续更新）</title>
+      <link>https://zeqiang.fun/post/techstack/ccf_set/</link>
+      <pubDate>Thu, 15 Aug 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/ccf_set/</guid>
+      <description>&lt;p&gt;来自&lt;a href=&#34;http://118.190.20.162/home.page&#34;&gt;ccf官网&lt;/a&gt;的模拟考題，报名后即可查看&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>结合JavaScript直接抓取网站内容</title>
+      <link>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</link>
+      <pubDate>Wed, 14 Aug 2019 00:09:26 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</guid>
+      <description>&lt;p&gt;该方法用于解决“爬虫操作繁琐与手动复制太累”的情况&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于Hugo与Github建立自己的博客</title>
+      <link>https://zeqiang.fun/post/techstack/bulid-a-blog/</link>
+      <pubDate>Sat, 27 Jul 2019 14:31:12 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/bulid-a-blog/</guid>
+      <description>&lt;p&gt;为了总结经验，笔者借此写下利用hugo与github来建立自己的博客的经验，欢迎交流&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

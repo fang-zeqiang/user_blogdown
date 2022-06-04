@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/tags/python/</link>
+    <description>Recent content in Python on Zeqiang Fang | 方泽强</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 20 Jan 2020 10:53:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://zeqiang.fun/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基于文本挖掘分析谷歌招聘信息项目</title>
+      <link>https://zeqiang.fun/post/techstack/how-to-get-google/</link>
+      <pubDate>Mon, 20 Jan 2020 10:53:54 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/how-to-get-google/</guid>
+      <description>&lt;p&gt;结合Python与Echarts的数据挖掘项目&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>🔥基于Python的CCF模拟題解析（持续更新）</title>
+      <link>https://zeqiang.fun/post/techstack/ccf_set/</link>
+      <pubDate>Thu, 15 Aug 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/ccf_set/</guid>
+      <description>&lt;p&gt;来自&lt;a href=&#34;http://118.190.20.162/home.page&#34;&gt;ccf官网&lt;/a&gt;的模拟考題，报名后即可查看&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>结合JavaScript直接抓取网站内容</title>
+      <link>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</link>
+      <pubDate>Wed, 14 Aug 2019 00:09:26 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</guid>
+      <description>&lt;p&gt;该方法用于解决“爬虫操作繁琐与手动复制太累”的情况&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

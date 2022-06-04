@@ -1,22 +1,18 @@
 {
-  "short_name": "Leo Van | 范叶亮",
-  "name": "Leo Van's Personal Website | 范叶亮的个人网站",
-  "description": "Leo Van's Personal Website | 范叶亮的个人网站",
-  "icons": [
-    {
-      "src": "/images/web/icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/images/web/icon-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/?source=pwa",
-  "background_color": "#fdfdfd",
-  "display": "standalone",
-  "scope": "/",
-  "theme_color": "#0d0d0d"
+    "name": "",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
 }

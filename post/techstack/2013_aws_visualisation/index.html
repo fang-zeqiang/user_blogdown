@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Individual Project: 2013 AWS Honeypot Attacks Visualisation - Zeqiang Fang | 方泽强</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Zeqiang Fang" /><meta name="description" content="This is my first individual digital visualisation project about the AWS server attacks.
+" /><meta name="keywords" content="Mac, Software Engineer, Python, Echarts" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.1 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://zeqiang.fun/post/techstack/2013_aws_visualisation/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Individual Project: 2013 AWS Honeypot Attacks Visualisation" />
+<meta property="og:description" content="This is my first individual digital visualisation project about the AWS server attacks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zeqiang.fun/post/techstack/2013_aws_visualisation/" />
+<meta property="article:published_time" content="2021-04-23T10:29:30&#43;08:00"/>
+<meta property="article:modified_time" content="2021-04-23T10:29:30&#43;08:00"/>
+
+<meta itemprop="name" content="Individual Project: 2013 AWS Honeypot Attacks Visualisation">
+<meta itemprop="description" content="This is my first individual digital visualisation project about the AWS server attacks.">
+
+
+<meta itemprop="datePublished" content="2021-04-23T10:29:30&#43;08:00" />
+<meta itemprop="dateModified" content="2021-04-23T10:29:30&#43;08:00" />
+<meta itemprop="wordCount" content="488">
+
+
+
+<meta itemprop="keywords" content="Javascripts,Mapbox," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Individual Project: 2013 AWS Honeypot Attacks Visualisation"/>
+<meta name="twitter:description" content="This is my first individual digital visualisation project about the AWS server attacks."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Zeqiang Fang</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a><a href="/cv-cn/">
+        <li class="mobile-menu-item">简历</li>
+      </a><a href="/friendlink/">
+        <li class="mobile-menu-item">友情链接</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Zeqiang Fang</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/cv-cn/">简历</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/friendlink/">友情链接</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Individual Project: 2013 AWS Honeypot Attacks Visualisation</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-04-23 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E6%A0%88/"> 技术栈 </a>
+            </div>
+          <span class="more-meta"> 约 488 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>This is my first individual digital visualisation project about the AWS server attacks.</p>
+
+<p>It is available to visit this visualisation in this <a href="https://fang-zeqiang.github.io/2013_AWS_Honeypot_Attacks_Visualisation/">link</a> : )
+I want to hear your feedback.</p>
+
+
+
+<iframe
+    src="//zeqiang.fun/2013_AWS_Honeypot_Attacks_Visualisation"
+    scrolling="no"
+    height="1000px"
+    width="760px"
+    frameborder="no"
+    framespacing="0"
+    allowfullscreen="true"
+>
+</iframe>
+
+<h1 id="intro">Intro</h1>
+
+<p>This visualisation work is aiming to
+present the cyber-attacks on Amazon web services (AWS) honeypot server from
+March 2013 to September 2013 in US and the frequency of attack cases is counted
+for 50 states. The key findings are shown below:</p>
+
+<ol>
+<li><strong>TCP</strong> is the most frequent use of cyber security protocol in 2013 attack events.
+But it is better to care about the small probability events happening
+because of the Murphy&rsquo;s law appear in server security protection such as
+ICMP protocol.</li>
+<li>Most of attackers were in the
+western and eastern area such as California and New York. Although
+attackers such as individual hackers may utilise different servers in
+different places, it is meaningful for enterprises to trace the pattern of
+attacks. The top 10 states where attackers attempted most are given below:</li>
+</ol>
+
+<table>
+<thead>
+<tr>
+<th><strong>Top 10 states in the frequency of attacks</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>California</td>
+</tr>
+
+<tr>
+<td>Colorado</td>
+</tr>
+
+<tr>
+<td>Florida</td>
+</tr>
+
+<tr>
+<td>Missouri</td>
+</tr>
+
+<tr>
+<td>Arizona</td>
+</tr>
+
+<tr>
+<td>Pennsylvania</td>
+</tr>
+
+<tr>
+<td>Illinois</td>
+</tr>
+
+<tr>
+<td>New York</td>
+</tr>
+
+<tr>
+<td>Washington</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="design">Design</h1>
+
+<p>The design idea of this work is from the perspectives of user portrait, colour matching, legibility and accuracy, interactivity, etc., to better show AWS honeypot attack data in the US. Firstly, the target audience for this work is server security practitioners and some non-technical personnel who are interested in network services. This work attempts to make a good balance between legibility and accuracy. Accuracy is reflected in that whenever the mouse hovers over any information point, the specific and accurate information of the attackers will be displayed in the bottom-left corner of the window. Lastly, the colour adopts the concept of contrast, such as blue versus yellow. I try to select a colour with lower saturation so that it is not easy to cause aesthetic fatigue.</p>
+
+<h1 id="technical-approach">Technical Approach</h1>
+
+<p>Two map styles (&ldquo;All Details&rdquo; and &ldquo;Frequency of Attacks for 50 States&rdquo;) were made in
+Mapbox Studio. Then these two styles were imported into html file via mapbox-gl.js tool. Furthermore, click buttons were placed in top-left window to let users choose which layer they want to explore, and they can switch two different layers to compare easily. To achieve this function, addEventListener were applied in monitoring users&rsquo; behaviours such as &ldquo;click&rdquo;. Once they click the button, the switchLayer() will execute to switch different maps. Then the flyTo() method allow users can visit some interesting states such as California more directly. Most interesting part in technical approaches is the mousemove() function. This method can allow users to visit more accurate information about attackers who attack the host of AWS servers.</p>
+
+<h1 id="dataset">Dataset</h1>
+
+<p>This dataset is from Kaggle, archived by Jacobs &amp; Bob Rudis who worked in Amazon. The AWS Honeypot Database is an open-source database including information on cyber-attacks/attempts. The original data has 451,581 data points collected from 9:53pm on 3 March 2013 to 5:55am on 8 September 2013.</p>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/javascripts/">Javascripts</a>
+          <a href="/tags/mapbox/">Mapbox</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/techstack/project_abeona/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Web Development Group Project: Project Abeona - UK Traffic Accidents Studying</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/personal/collect_insight/">
+            <span class="next-text nav-default">Personal Understanding From &#39;7 Habits of Highly Effective People&#39;</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  <span id="/post/techstack/2013_aws_visualisation/" class="leancloud_visitors" data-flag-title="Individual Project: 2013 AWS Honeypot Attacks Visualisation">
+		<span class="post-meta-item-text">文章阅读量 </span>
+		<span class="leancloud-visitors-count">0</span>
+		<p></p>
+	  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'coQHDtd3wfXbUbhqckEOviU4-gzGzoHsz',
+        appKey: '2Ryt2Onv8FtrU0izHHFVO9kN',
+        notify:  true , 
+        verify:  false , 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:zeqiangfang@foxmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/fang-zeqiang" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/9199910" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://zeqiang.fun/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Zeqiang Fang</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,410 +1,345 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage | 主页 on Zeqiang Fang | 方泽强</title>
-    <link>http://zeqiang.fun/user_blogdown/</link>
-    <description>Recent content in Homepage | 主页 on Zeqiang Fang | 方泽强</description>
+    <title>Zeqiang Fang | 方泽强</title>
+    <link>https://zeqiang.fun/</link>
+    <description>Recent content on Zeqiang Fang | 方泽强</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://zeqiang.fun/user_blogdown/" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 01 Jun 2021 21:27:31 +0800</lastBuildDate>
     
-    <item>
-      <title>简历</title>
-      <link>http://zeqiang.fun/user_blogdown/cn/resume/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>http://zeqiang.fun/user_blogdown/cn/resume/</guid>
-      <description>
-        <![CDATA[
-        
-
-<h1 id="方泽强">方泽强</h1>
-
-<h2 id="联系方式">联系方式</h2>
-
-<p>Email: zeqiang.fang@foxmail.com; 个人主页: zeqiang.fun; 现居福建厦门 ; 英文简历</p>
-
-<h2 id="教育经历">教育经历</h2>
-
-<ul>
-<li><p>2020-2021 伦敦大学学院 /CASA高级空间分析中心 /空间数据科学与可视化</p></li>
-
-<li><p>2016-2020 南京财经大学 /信息工程学院 /软件工程</p></li>
-
-<li><p>2017-2020 南京财经大学 /金融学院 /金融学</p></li>
-
-<li><p>2018-2018 加州大学伯克利分校 /Haas哈斯商学院 /投资学</p></li>
-</ul>
-
-<h2 id="研究兴趣">研究兴趣</h2>
-
-<ul>
-<li><p>时空数据挖掘方向</p></li>
-
-<li><p>数据可视化方向</p></li>
-
-<li><p>区块链智能合约安全性能验证</p></li>
-</ul>
-
-<h2 id="实习经历">实习经历</h2>
-
-<p><strong>20.11-21.03</strong> <strong>网易有道信息技术（北京）有限公司</strong> <em>数据运营岗</em></p>
-
-<ul>
-<li><p>共计生产10个周度，3个月度数据分析报表生成以及数据可视化呈现</p></li>
-
-<li><p>销售数据中台业务梳理，跟进包括营销玩法，渠道审核，激活指标等系统业务需求</p></li>
-
-<li><p>智能硬件市场秩序维护运营，总结周度季度渠道商返利等指标</p></li>
-
-<li><p>根据PDD爬虫数据进行数据预处理</p></li>
-
-<li><p>跟进英语教材产品开发，完成2本课本中共计140多个教材音频切分处理与字幕校对，帮助产品组与词典笔入校业务达成重大进展</p></li>
-</ul>
-
-<p><strong>19.07-19.09</strong> <strong>南京晟道科技有限公司</strong> <em>数据分析岗</em></p>
-
-<ul>
-<li><p>标注1万余条企业金融舆情数据，每天超额完成100条数据</p></li>
-
-<li><p>承接苏宁AI文案项目，两天处理7500条文本数据，帮助公司达成重要合作</p></li>
-</ul>
-
-<p><strong>18.12-19.02</strong> <strong>厦门建发集团有限公司</strong> <em>产品开发岗</em></p>
-
-<ul>
-<li><p>一天内完成8份面向客户的PPT（服装智能工厂），帮助团队签订两大重要项目</p></li>
-
-<li><p>使用Axure RP设计5个交互页面（点价交易APP），加快移动端软件上线速度</p></li>
-</ul>
-
-<h2 id="项目实践">项目实践</h2>
-
-<p><strong>2020.11-2021.01 伦敦新能源汽车充电桩空间密度分析</strong></p>
-
-<ul>
-<li><p>数据预处理: 完成近12000个数据记录中，使用R语言工具包对应伦敦行政32个区域邮编自动标注，筛选出2019年到2020年的共1058个有效数据记录</p></li>
-
-<li><p>地图制作：使用R的tmap工具完成2020年与2019年的伦敦地区的按行政区域的空间密度分析，按颜色深浅区分密度大小，输出两个有对比意义的二维地图。</p></li>
-
-<li><p>空间计量：使用全局莫兰指数和局部莫兰指数研究伦敦充电桩密度的空间自相关，先绘制空间权重可视化地图，最后使用leaflet输出按32个行政区域的局部莫兰指数可视化交互地图并使用自相关指标Gi-score进行空间相关性评估</p></li>
-</ul>
-
-<p><strong>2019 面向STEM的职业规划平台</strong></p>
-
-<p>拟省级优秀毕业设计；平台流量监控数据分析后台开发；职业规划推荐程序设计；平台产品需求分析</p>
-
-<p><strong>2019 基于文本挖掘分析公司招聘信息</strong></p>
-
-<p>基于Python的4个属性的词频统计；5种数据可视化方案呈现；3个维度聚类分析；地理热点图编程绘制</p>
-
-<p><strong>2019 基于Python数据呈现工具开发</strong></p>
-
-<p>基于Qt图形界面开发；Python后端实现嵌入Echarts</p>
-
-<p><strong>2018 网红店运营模式白皮书</strong></p>
-
-<p>Python爬虫3千条数据；Weka机器学习实现4个维度聚类</p>
-
-<p><strong>2018 “格林童话”护肤产品开发方案</strong></p>
-
-<p>获全国二等奖及一万元奖学金，主办方为Amore Pacifics</p>
-
-<p><strong>2018 Annalys年报分析报告(海外商学院项目)</strong></p>
-
-<p>SPSS数据呈现；JavaScript数据抓取；经学院考核满分通过</p>
-
-<p><strong>2019 区块链智能合约的安全性验证</strong></p>
-
-<p>智能合约Solidity代码实现；6个合约UML业务建模；获得江苏省级立项与10000元人民币赞助</p>
-
-<h2 id="技术栈">技术栈</h2>
-
-<p>Office 精通</p>
-
-<p>Python 熟练</p>
-
-<p>Axure RP 熟练</p>
-
-<p>SQL 熟练</p>
-
-<p>Linux 熟练</p>
-
-<p>C#.NET 普通</p>
-
-<p>J2EE 普通</p>
-
-        ]]>
-      </description>
-    </item>
+	<atom:link href="https://zeqiang.fun/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Resume</title>
-      <link>http://zeqiang.fun/user_blogdown/en/resume-%E4%BF%AE%E6%94%B9%E5%AF%BC%E8%88%AA%E6%A0%8F%E8%AF%AD%E8%A8%80-/</link>
-      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://zeqiang.fun/user_blogdown/en/resume-%E4%BF%AE%E6%94%B9%E5%AF%BC%E8%88%AA%E6%A0%8F%E8%AF%AD%E8%A8%80-/</guid>
-      <description>
-        <![CDATA[
-        
-
-<p><!-- disable capitalize the first letter --></p>
-
-<h2 id="zeqiang-fang-franklin">Zeqiang Fang (Franklin)</h2>
-
-<h2 id="span-class-mdi-mdi-bullseye-arrow-span-research-interest"><span class="mdi mdi-bullseye-arrow"></span> Research Interest</h2>
-
-<ul>
-<li>Data Mining</li>
-<li>Data Visualisation &amp; Storytelling</li>
-</ul>
-
-<h2 id="span-class-mdi-mdi-school-outline-span-education"><span class="mdi mdi-school-outline"></span> Education</h2>
-
-<ul>
-<li>2020 ~ 2021 <strong>UCL</strong>, CASA, Spatial Data Science and Visualization</li>
-<li>2016 ~ 2020 <strong>Nanjing University of Finance and Economics</strong>, School of Information Engineering, Computer Science</li>
-<li>2017 ~ 2020 <strong>Nanjing University of Finance and Economicss</strong>(Second Degree), School of Finance, Finance</li>
-<li>2018.07 ~ 2018.08 <strong>UC Berkeley</strong>, Haas School of Business, Investment</li>
-</ul>
-
-<h2 id="span-class-mdi-mdi-account-group-outline-span-work-experiences"><span class="mdi mdi-account-group-outline"></span> Work Experiences</h2>
-
-<p>2021.03 ~ Present, <strong>Alibaba Group</strong>, Data Engineer</p>
-
-<h2 id="span-class-mdi-mdi-clipboard-list-outline-span-project-experiences"><span class="mdi mdi-clipboard-list-outline"></span> Project Experiences</h2>
-
-<h3 id="teambition-dingtalk-project-data-mid-end-platform-modelling">Teambition(Dingtalk Project) Data Mid-End Platform Modelling</h3>
-
-<p><em>2021.04 ~ Present, Data Engineer</em></p>
-
-<h3 id="efficiency-360-product-upgrade">Efficiency 360 Product Upgrade</h3>
-
-<p><em>2021.04 ~ 2021.05, Data Engineer &amp; Analyst</em></p>
-
-<ul>
-<li>Access to Dataphin platform code submissions</li>
-<li>Identify abnormal code commits</li>
-</ul>
-
-<h2 id="span-class-mdi-mdi-cog-outline-span-skills"><span class="mdi mdi-cog-outline"></span> Skills</h2>
-
-<h3 id="programing-languages">Programing Languages</h3>
-
-<ul>
-<li>R: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span></li>
-<li>Python: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span></li>
-<li>SQL: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span></li>
-<li>HTML / CSS / JavaScript: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span><span class="mdi mdi-star-outline"></span></li>
-</ul>
-
-<p>
-  
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/material-components-web@latest/dist/material-components-web.min.css">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="mdc-chip-set" role="grid">
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="0" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2000: Logo</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="1" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2002: Basic & HTML</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="2" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2006: Visual Basic</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="3" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2008: C/C++ & PHP</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="4" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2010: Matlab</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="5" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2012: Python & R</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="5" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2015: Java</span>
-      </span>
-    </span>
-  </div>
-  <div class="mdc-chip" role="row">
-    <div class="mdc-chip__ripple"></div>
-    <span role="gridcell">
-      <span role="button" tabindex="6" class="mdc-chip__primary-action">
-        <span class="mdc-chip__text">2017: JavaScript</span>
-      </span>
-    </span>
-  </div>
-</div>
-
-
-
-
-</p>
-
-<!-- 这个标签用到了short-code load-mdc是什么意思，需要搞清楚 -->
-
-<h3 id="tools">Tools</h3>
-
-<ul>
-<li>Axure: <span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star"></span><span class="mdi mdi-star-outline"></span></li>
-</ul>
-
-<h3 id="open-source-projects">Open Source Projects</h3>
-
-<ol>
-<li><a href="https://github.com/fang-zeqiang/PyQt_Echarts_GUI" rel="noreferrer" target="_blank">PyQt GUI for ECharts</a>: Readme manual (English/Chinese Version). <img src="https://img.shields.io/github/stars/fang-zeqiang/PyQt_Echarts_GUI.svg?style=social&amp;label=Stars" alt="github-stars" /></li>
-</ol>
-
-<!-- 只需要改动/fang-zeqiang/PyQt_Echarts_GUI即可更改对应仓库的star数统计 -->
-
-<h2><a href="https://zeqiang.fun/cv-cn/" target="_blank" style="border: none;">Online Version <span class="mdi mdi-download"></span></a></h2>
-
-<!-- 上面的标签原本是为了提供离线版本的简历 -->
-
-<p style="text-align: right;">Updated on: 2022-06-03</p>
-
-        ]]>
-      </description>
-    </item>
     
     <item>
       <title>关于</title>
-      <link>http://zeqiang.fun/user_blogdown/cn/about/</link>
-      <pubDate>Wed, 04 Dec 2019 00:00:00 +0000</pubDate>
+      <link>https://zeqiang.fun/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>http://zeqiang.fun/user_blogdown/cn/about/</guid>
-      <description>
-        <![CDATA[
-        
-
-<h1 id="我是谁">我是谁？</h1>
-
-<p>一个妄想读博的新人硕士毕业生，不高但长相周正，比王力宏鼻子大，没有林更新高，脸比彭于晏尖……正经介绍请参见<a href="https://zeqiang.fun/cv/" rel="noreferrer" target="_blank">我的简历</a>。</p>
-
-<p><picture>
-  <source media="(min-width: 1200px)" srcset="/images/me/about-large.jpg">
-  <source media="(min-width: 800px)" srcset="/images/me/about-medium.jpg">
-  <img src="/images/me/about-small.jpg" alt="方泽强">
-  <source type="image/webp" media="(min-width: 1200px)" srcset="/images/me/about-large.webp">
-  <source type="image/webp" media="(min-width: 800px)" srcset="/images/me/about-medium.webp">
-  <source type="image/webp" srcset="/images/me/about-small.webp">
-</picture></p>
-
-<blockquote>
-<p>终身学习者与生活体验家</p>
-</blockquote>
-
-<p>建立这个博客的意义在于沉淀自我，复盘技术项目，记录生活思考，锻炼自己的成长型思维。我是一个喜欢折腾的人，爱看科幻小说（心头好是阿西莫夫基地和大刘的三体）；喜欢捣弄技术类的东西，比如云服务器的部署，亦或是个体仿真模拟复现的<a href="https://github.com/openai/neural-mmo" rel="noreferrer" target="_blank">OpenAI的沙盘游戏</a>；也热衷于电子游戏鉴赏，最爱<a href="https://www.douban.com/game/26317250/" rel="noreferrer" target="_blank">奇异人生系列</a>和<a href="http://mc.163.com/" rel="noreferrer" target="_blank">我的世界</a>。</p>
-
-<p>因为还在读书，不说业余就说学余吧。我滑过两年滑板，愿意结交大佬一起解锁新姿势；也喜欢画画，可以说擅长手绘+编程的视觉传达；另外本人沉迷电影无法自拔，最爱<a href="https://movie.douban.com/subject/2132932/" rel="noreferrer" target="_blank">星际迷航系列</a>和<a href="https://movie.douban.com/subject/25934014/" rel="noreferrer" target="_blank">爱乐之城</a>，看图识电影比google还准。</p>
-
-<blockquote>
-<p>优雅永不过时</p>
-</blockquote>
-
-<p>我属于在某些小处的略微偏执狂，比如网页的字体要调成<a href="https://source.typekit.com/source-han-sans/cn/" rel="noreferrer" target="_blank">思源宋体</a>，喜欢井井有条的一切，还在不断修炼自己的大局观。</p>
-
-<p>曾经和发小两个背包跑到欧洲、新西兰穷游；在大学社团联合会搞过团建活动，线性代数挂过科，在伯克利暑校学过爵士乐历史，干过很多份实习，做过营销比赛，精通ppt也会写文案，渴望接一两个项目充实生活挑战自我。</p>
-
-        ]]>
-      </description>
+      <guid>https://zeqiang.fun/about/</guid>
+      <description>我是谁 一个正在北京上着网课的UCL硕士生，不高但长相周正，比王力宏鼻子大，没有林更新高，脸比彭于晏尖&amp;hellip;&amp;hellip;正经介绍</description>
     </item>
     
     <item>
-      <title>About</title>
-      <link>http://zeqiang.fun/user_blogdown/en/about/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      <title>简历</title>
+      <link>https://zeqiang.fun/cv-cn/</link>
+      <pubDate>Sat, 27 Jul 2019 17:09:25 +0800</pubDate>
       
-      <guid>http://zeqiang.fun/user_blogdown/en/about/</guid>
-      <description>
-        <![CDATA[
-        
-
-<h1 id="who-am-i">Who am I?</h1>
-
-<p>To Be Done</p>
-
-        ]]>
-      </description>
+      <guid>https://zeqiang.fun/cv-cn/</guid>
+      <description>简历 方泽强 联系方式 Email: zeqiang.fang@foxmail.com; 个人主页: zeqiang.fun; 现居福建厦门 ; 英文简历 教育经历 2020-2021 伦敦大学学院 /CASA /空间数据科学与可视化 2016-2020 南京财经大学（全日制本科) /信息工程</description>
     </item>
     
     <item>
-      <title>English Blogs</title>
-      <link>http://zeqiang.fun/user_blogdown/en/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      <title>友情链接</title>
+      <link>https://zeqiang.fun/friendlink/</link>
+      <pubDate>Sat, 27 Jul 2019 17:28:49 +0800</pubDate>
       
-      <guid>http://zeqiang.fun/user_blogdown/en/</guid>
-      <description>
-        <![CDATA[
-        
-        ]]>
-      </description>
+      <guid>https://zeqiang.fun/friendlink/</guid>
+      <description>大学同窗 不羁之欢 #老Java 托马斯的奇妙屋 #前端大佬 #移动端 奚宇星 赵晓雪 #Java 刘永杰 孙卓 张影 #信息学 硕士同窗 周正梓 #城市分析 #UCL 杨家烨 #慕尼黑工业</description>
     </item>
     
     <item>
-      <title>中文博客</title>
-      <link>http://zeqiang.fun/user_blogdown/cn/</link>
-      <pubDate>Mon, 04 Dec 2017 00:00:00 +0000</pubDate>
+      <title>IELTS-NOTE (2) Pronunciation</title>
+      <link>https://zeqiang.fun/post/ilets/ielts-pronunciation/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0800</pubDate>
       
-      <guid>http://zeqiang.fun/user_blogdown/cn/</guid>
-      <description>
-        <![CDATA[
-        
-        ]]>
-      </description>
+      <guid>https://zeqiang.fun/post/ilets/ielts-pronunciation/</guid>
+      <description>&lt;p&gt;The most common 10 mistakes, made by Chinese, in English pronunciation&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IELTS-NOTE (1) Writing</title>
+      <link>https://zeqiang.fun/post/ilets/ielts-writing/</link>
+      <pubDate>Wed, 31 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/ilets/ielts-writing/</guid>
+      <description>&lt;p&gt;My writing note about IELTS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown Cheatsheet</title>
+      <link>https://zeqiang.fun/post/techstack/mdcheatsheet/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/mdcheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工作，读书与财富</title>
+      <link>https://zeqiang.fun/post/weeklyupdate/weeklyupdate_3/</link>
+      <pubDate>Tue, 01 Jun 2021 21:27:31 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/weeklyupdate/weeklyupdate_3/</guid>
+      <description>&lt;p&gt;深度学习大神李沐在知乎里发表了自己的工作多年的感言，其中涉及家庭、职业规划和人生价值；此文给我许多启发，像是摸着前人的路大概能看到未来的那一抹模糊的轮廓；同时结合自己近期在区块链项目上的摸索，希望能形成一个较为自洽的思考链路&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to upload large file to your Github repository? </title>
+      <link>https://zeqiang.fun/post/techstack/github_lfs/</link>
+      <pubDate>Sun, 23 May 2021 16:56:43 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/github_lfs/</guid>
+      <description>&lt;p&gt;Git-LFS can help!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web Development Group Project: Project Abeona - UK Traffic Accidents Studying</title>
+      <link>https://zeqiang.fun/post/techstack/project_abeona/</link>
+      <pubDate>Fri, 23 Apr 2021 11:37:33 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/project_abeona/</guid>
+      <description>&lt;p&gt;CASA17 Web Architecture - Group Report&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Individual Project: 2013 AWS Honeypot Attacks Visualisation</title>
+      <link>https://zeqiang.fun/post/techstack/2013_aws_visualisation/</link>
+      <pubDate>Fri, 23 Apr 2021 10:29:30 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/2013_aws_visualisation/</guid>
+      <description>&lt;p&gt;This is my first individual digital visualisation project about the AWS server attacks.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Personal Understanding From &#39;7 Habits of Highly Effective People&#39;</title>
+      <link>https://zeqiang.fun/post/personal/collect_insight/</link>
+      <pubDate>Sun, 14 Feb 2021 16:18:20 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/collect_insight/</guid>
+      <description>&lt;p&gt;After reading 7 Habits of Highly Effective People (Covey), I construct a personal insight to understand this book. Combining other insights from &lt;a href=&#34;https://www.bilibili.com/video/BV15J411E7iw?from=search&amp;amp;seid=5112755811130855766&#34;&gt;Gloria Gao&lt;/a&gt;, I rewrote the notes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>正经人谁写日记阿？</title>
+      <link>https://zeqiang.fun/post/personal/work_2/</link>
+      <pubDate>Sun, 03 Jan 2021 23:17:43 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/work_2/</guid>
+      <description>&lt;p&gt;写给正在元旦末尾赶作业的自己
+人如果能保持远视，不断的有新的选择终究是好的&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>🔥关于各种快捷键令人头疼必须特地写篇文章一事</title>
+      <link>https://zeqiang.fun/post/notes/shortcut_for_all/</link>
+      <pubDate>Fri, 25 Dec 2020 12:22:25 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/shortcut_for_all/</guid>
+      <description>&lt;p&gt;These troublesome shortcode operation is based on the MacOS systems :-). If you are Windows users, you can try to replace &lt;code&gt;CMD&lt;/code&gt; with &lt;code&gt;CTRL&lt;/code&gt; to success run these shortcuts.&lt;/p&gt;
+
+&lt;p&gt;人的记忆终究是有极限的呀！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>听自我进化论有感</title>
+      <link>https://zeqiang.fun/post/personal/word_1/</link>
+      <pubDate>Thu, 03 Dec 2020 12:55:38 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/word_1/</guid>
+      <description>&lt;p&gt;最近沉迷播客，看了年度报告后发现自己去年竟然听了137多个小时，其中最喜欢的频道是自我进化论。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何成为群面中食物链顶端的那个TA</title>
+      <link>https://zeqiang.fun/post/notes/group_interview/</link>
+      <pubDate>Fri, 06 Nov 2020 00:55:47 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/group_interview/</guid>
+      <description>&lt;p&gt;从一次辅导和两次实战经验所获得的宝贵经验，要找到自己在团队中的位置，辩证地看待合作与竞争&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于UCL补申请</title>
+      <link>https://zeqiang.fun/post/personal/ucl_addition/</link>
+      <pubDate>Wed, 22 Apr 2020 10:31:36 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/ucl_addition/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>尼尔森面试前技能提升讲义（小王专场）</title>
+      <link>https://zeqiang.fun/post/notes/excel_ppt_handout/</link>
+      <pubDate>Sat, 11 Apr 2020 20:19:02 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/excel_ppt_handout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>个人Master录取情况</title>
+      <link>https://zeqiang.fun/post/personal/myapplication/</link>
+      <pubDate>Wed, 04 Mar 2020 21:48:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/myapplication/</guid>
+      <description>&lt;p&gt;My application about master programme&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于文本挖掘分析谷歌招聘信息项目</title>
+      <link>https://zeqiang.fun/post/techstack/how-to-get-google/</link>
+      <pubDate>Mon, 20 Jan 2020 10:53:54 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/how-to-get-google/</guid>
+      <description>&lt;p&gt;结合Python与Echarts的数据挖掘项目&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SQL学习笔记</title>
+      <link>https://zeqiang.fun/post/notes/sql-note-1/</link>
+      <pubDate>Thu, 19 Dec 2019 16:31:45 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/sql-note-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>智能合约研究笔记2</title>
+      <link>https://zeqiang.fun/post/notes/smartcontract-note-2/</link>
+      <pubDate>Wed, 18 Dec 2019 18:04:19 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/smartcontract-note-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>大数据技术栈笔记</title>
+      <link>https://zeqiang.fun/post/notes/bigdatanote1/</link>
+      <pubDate>Tue, 17 Dec 2019 21:28:50 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/bigdatanote1/</guid>
+      <description>&lt;p&gt;今天参加了奇安信的线上测试，基于平时所学与近期调研笔记，对大数据的行业技术栈需求有了一定了解&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何在Hugo静态博客中嵌入echarts图表</title>
+      <link>https://zeqiang.fun/post/techstack/echarts/</link>
+      <pubDate>Fri, 15 Nov 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/echarts/</guid>
+      <description>&lt;p&gt;数据可视化嵌入实验&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何修改Hosts文件访问特定网站</title>
+      <link>https://zeqiang.fun/post/techstack/hosts_revise/</link>
+      <pubDate>Sat, 09 Nov 2019 14:03:07 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/hosts_revise/</guid>
+      <description>&lt;p&gt;因为搭梯子的问题引出了host问题
+有些网站是不需要翻墙，只需要绑定host就可以访问，比如&lt;a href=&#34;https://lncn.org&#34;&gt;lncn.org&lt;/a&gt;
+我之前上Coursera，看上面的视频就需要绑定hosts才能流畅观看
+还有Cambly口语练习网站，官方就有教我们如何修改Hosts访问
+OneDrive也不能幸免，毕竟服务器在海外&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>常怀千岁忧</title>
+      <link>https://zeqiang.fun/post/weeklyupdate/weeklyupdate_2/</link>
+      <pubDate>Wed, 11 Sep 2019 23:52:38 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/weeklyupdate/weeklyupdate_2/</guid>
+      <description>&lt;p&gt;读尤瓦尔·赫拉利的 &lt;em&gt;A brief history of humankind&lt;/em&gt; 有感&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>体力活还是脑力活？</title>
+      <link>https://zeqiang.fun/post/weeklyupdate/weeklyupdate_1/</link>
+      <pubDate>Fri, 23 Aug 2019 23:05:38 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/weeklyupdate/weeklyupdate_1/</guid>
+      <description>&lt;p&gt;为什么喜欢游戏？因为进入其中就是世界的主角&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>🔥基于Python的CCF模拟題解析（持续更新）</title>
+      <link>https://zeqiang.fun/post/techstack/ccf_set/</link>
+      <pubDate>Thu, 15 Aug 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/ccf_set/</guid>
+      <description>&lt;p&gt;来自&lt;a href=&#34;http://118.190.20.162/home.page&#34;&gt;ccf官网&lt;/a&gt;的模拟考題，报名后即可查看&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>结合JavaScript直接抓取网站内容</title>
+      <link>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</link>
+      <pubDate>Wed, 14 Aug 2019 00:09:26 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/hungry-english-getinfo/</guid>
+      <description>&lt;p&gt;该方法用于解决“爬虫操作繁琐与手动复制太累”的情况&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>作品集</title>
+      <link>https://zeqiang.fun/post/personal/work/</link>
+      <pubDate>Mon, 12 Aug 2019 22:47:50 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/work/</guid>
+      <description>&lt;p&gt;个人作品集，领域包括软件工程，脚本，数据挖掘，空间分析，网页开发&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IELTS Writing Task2 Topics</title>
+      <link>https://zeqiang.fun/post/ilets/ielts_task2_topic/</link>
+      <pubDate>Sun, 11 Aug 2019 11:40:13 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/ilets/ielts_task2_topic/</guid>
+      <description>&lt;p&gt;IELTS topics of task2 ,as follows, is for you !&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>摘录集</title>
+      <link>https://zeqiang.fun/post/personal/collect_saying/</link>
+      <pubDate>Fri, 02 Aug 2019 18:35:51 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/collect_saying/</guid>
+      <description>“这真是一个感人的故事。我没想到政治宣传也可以如此具有诗意。”（Sean）“我认为，战争归根结底是人的行为（human endeavor）。如</description>
+    </item>
+    
+    <item>
+      <title>智能合约研究笔记</title>
+      <link>https://zeqiang.fun/post/notes/smartcontract-note-1/</link>
+      <pubDate>Thu, 01 Aug 2019 16:13:50 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/notes/smartcontract-note-1/</guid>
+      <description>&lt;p&gt;“面向电子商务领域区块链智能合约的设计与实现” 项目笔记&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CV English Version</title>
+      <link>https://zeqiang.fun/post/personal/en-cv/</link>
+      <pubDate>Sat, 27 Jul 2019 17:09:25 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/en-cv/</guid>
+      <description>&lt;p&gt;英文版本简历，Nothing Special :-)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>基于Hugo与Github建立自己的博客</title>
+      <link>https://zeqiang.fun/post/techstack/bulid-a-blog/</link>
+      <pubDate>Sat, 27 Jul 2019 14:31:12 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/techstack/bulid-a-blog/</guid>
+      <description>&lt;p&gt;为了总结经验，笔者借此写下利用hugo与github来建立自己的博客的经验，欢迎交流&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>个人经历（详细）</title>
+      <link>https://zeqiang.fun/post/personal/myexperience/</link>
+      <pubDate>Sun, 27 Jan 2019 17:28:49 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/myexperience/</guid>
+      <description>中文简历内容v2.0 教育经历 伦敦大学学院 硕士 2020.09-2021.12 高级空间分析中心 空间数据科学与可视化 导师：Huanfa Chen GPA: 南京财经大学 本科 2016.09 - 2020.07 信息工程学院 软</description>
+    </item>
+    
+    <item>
+      <title>在伯克利读暑校是怎样一种体验</title>
+      <link>https://zeqiang.fun/post/personal/sffirst/</link>
+      <pubDate>Fri, 10 Aug 2018 18:14:01 +0800</pubDate>
+      
+      <guid>https://zeqiang.fun/post/personal/sffirst/</guid>
+      <description>&lt;p&gt;2018年暑假有幸通过学校前往伯克利读暑期学校，只可惜暑期并无计算机相关课程，选的investments几乎占用了所有工作日的自习时间，但还是忙里偷闲的玩了一把&lt;/p&gt;</description>
     </item>
     
   </channel>
